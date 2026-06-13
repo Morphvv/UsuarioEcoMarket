@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.sql.Date;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +31,7 @@ class MetodoPagoServiceTest {
     //Metodo de pago para prueba
     private MetodoPago nuevoMetodoPago(Long idMetodoPago, Long idUsuario, String tipoPago, String proveedorPago, String tokenPago, String ultimosDigitos, String alias, Date fechaExpiracion, String titular, Boolean activo, Boolean principal){
         MetodoPago m = new MetodoPago();
-        m.setIdMetodoPago(idMetodoPago);
+        ((MetodoPago) m).setIdMetodoPago(idMetodoPago);
         m.setIdUsuario(idUsuario);
         m.setTipoPago(tipoPago);
         m.setProveedorPago(proveedorPago);
