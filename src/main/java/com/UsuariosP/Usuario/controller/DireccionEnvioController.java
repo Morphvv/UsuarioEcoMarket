@@ -15,11 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.DireccionEnvio;
 import com.UsuariosP.Usuario.service.DireccionEnvioService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/v1/direccionEnvio")
 @CrossOrigin(origins = "*")
+@Tag(name = "Direcciones de envio", description = "Gestion de direcciones de envio")
 public class DireccionEnvioController {
 
     @Autowired

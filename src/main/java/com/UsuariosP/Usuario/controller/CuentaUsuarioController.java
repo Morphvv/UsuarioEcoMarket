@@ -16,9 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.UsuariosP.Usuario.model.CuentaUsuario;
 import com.UsuariosP.Usuario.service.CuentaUsuarioService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("api/v1/cuentaUsuario")
 @CrossOrigin(origins = "*")
+@Tag(name = "Cuenta de usuario", description = "Gestion de cuentas")
 
 public class CuentaUsuarioController {
 

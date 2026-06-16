@@ -19,10 +19,13 @@ public class MetodoPagoService {
     private MetodoPagoRepository metodoPagoRepository;
 
     public MetodoPago crear(MetodoPago metodoPago){
-        metodoPago.setActivo(true);
+        boolean activoFueNulo = metodoPago.getActivo() == null;
+        if (activoFueNulo) {
+            metodoPago.setActivo(true);
+        }
 
         if (metodoPago.getPrincipal() == null) {
-            metodoPago.setPrincipal(false);
+            metodoPago.setPrincipal(!activoFueNulo && Boolean.TRUE.equals(metodoPago.getActivo()));
         }
 
         return metodoPagoRepository.save(metodoPago);
@@ -37,45 +40,41 @@ public class MetodoPagoService {
     }
 
     public MetodoPago modificarMetodoPago(Long id, MetodoPago metodoPago){
-        MetodoPago existente = metodoPagoRepository.findById(id).orElse(null);
+        MetodoPago existente = metodoPagoRepository.findById(id)
             .orElseThrow(() -> new RecursoNoEncontradoException("No existe un metodo de pago con id " + id));
 
-        if (existente != null) {
-            existente.setTipoPago(metodoPago.getTipoPago());
-            existente.setProveedorPago(metodoPago.getProveedorPago());
-            existente.setTokenPago(metodoPago.getTokenPago());
-            existente.setUltimosDigitos(metodoPago.getUltimosDigitos());
-            existente.setAlias(metodoPago.getAlias());
-            existente.setFechaExpiracion(metodoPago.getFechaExpiracion());
-            existente.setTitular(metodoPago.getTitular());
-            existente.setActivo(metodoPago.getActivo());
-            existente.setPrincipal(metodoPago.getPrincipal());
+        existente.setTipoPago(metodoPago.getTipoPago());
+        existente.setProveedorPago(metodoPago.getProveedorPago());
+        existente.setTokenPago(metodoPago.getTokenPago());
+        existente.setUltimosDigitos(metodoPago.getUltimosDigitos());
+        existente.setAlias(metodoPago.getAlias());
+        existente.setFechaExpiracion(metodoPago.getFechaExpiracion());
+        existente.setTitular(metodoPago.getTitular());
+        existente.setActivo(metodoPago.getActivo());
+        existente.setPrincipal(metodoPago.getPrincipal());
 
-            return metodoPagoRepository.save(existente);
-        }
-        return null;
+        return metodoPagoRepository.save(existente);
     }
 
     public MetodoPago marcarComoPrincipal(Long id){
         MetodoPago existente = metodoPagoRepository.findById(id).orElse(null);
-            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un metodo de pago con id " + id));
+        if (existente == null) {
+            return null;
+        }
 
-        if (existente != null){
-            List<MetodoPago> metodos = metodoPagoRepository.findByUsuarioRut(existente.getUsuario().getRut());
-            for (MetodoPago metodo : metodos) {
+        List<MetodoPago> metodos = metodoPagoRepository.findByUsuarioRut(existente.getUsuario().getRut());
+        for (MetodoPago metodo : metodos) {
+            if (metodo.getIdMetodoPago() != existente.getIdMetodoPago()) {
                 metodo.setPrincipal(false);
                 metodoPagoRepository.save(metodo);
             }
-            existente.setPrincipal(true);
-            return metodoPagoRepository.save(existente);
         }
-
-        return null;
+        existente.setPrincipal(true);
+        return metodoPagoRepository.save(existente);
     }
 
     public MetodoPago desactivar(Long id){
         MetodoPago existente = metodoPagoRepository.findById(id).orElse(null);
-            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un metodo de pago con id " + id));
 
         if (existente != null) {
             existente.setActivo(false);

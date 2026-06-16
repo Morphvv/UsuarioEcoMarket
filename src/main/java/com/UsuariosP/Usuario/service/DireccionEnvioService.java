@@ -36,39 +36,37 @@ public class DireccionEnvioService {
     }
 
     public DireccionEnvio modificarDireccionEnvio(Long id, DireccionEnvio direccionEnvio){
-        DireccionEnvio existente = direccionEnvioRepository.findById(id).orElse(null);
+        DireccionEnvio existente = direccionEnvioRepository.findById(id)
             .orElseThrow(() -> new RecursoNoEncontradoException("No existe una direccion con id " + id));
 
-        if (existente != null) {
-            existente.setCalle(direccionEnvio.getCalle());
-            existente.setNumero(direccionEnvio.getNumero());
-            existente.setComuna(direccionEnvio.getComuna());
-            existente.setCiudad(direccionEnvio.getCiudad());
-            existente.setRegion(direccionEnvio.getRegion());
-            existente.setCodigoPostal(direccionEnvio.getCodigoPostal());
-            existente.setReferencia(direccionEnvio.getReferencia());
-            existente.setDireccionPrincipal(direccionEnvio.getDireccionPrincipal());
-            existente.setActiva(direccionEnvio.getActiva());
+        existente.setCalle(direccionEnvio.getCalle());
+        existente.setNumero(direccionEnvio.getNumero());
+        existente.setComuna(direccionEnvio.getComuna());
+        existente.setCiudad(direccionEnvio.getCiudad());
+        existente.setRegion(direccionEnvio.getRegion());
+        existente.setCodigoPostal(direccionEnvio.getCodigoPostal());
+        existente.setReferencia(direccionEnvio.getReferencia());
+        existente.setDireccionPrincipal(direccionEnvio.getDireccionPrincipal());
+        existente.setActiva(direccionEnvio.getActiva());
 
-            return direccionEnvioRepository.save(existente);
-        }
-        return null;
+        return direccionEnvioRepository.save(existente);
     }
 
     public DireccionEnvio marcarComoPrincipal(Long id){
         DireccionEnvio existente = direccionEnvioRepository.findById(id).orElse(null);
-            .orElseThrow(() -> new RecursoNoEncontradoException("No existe una direccion con id " + id));
-            
-        if (existente != null){
-            List<DireccionEnvio> direcciones = direccionEnvioRepository.findByUsuarioRut(existente.getUsuario().getRut());
-            for (DireccionEnvio direccion : direcciones) {
+        if (existente == null) {
+            return null;
+        }
+
+        List<DireccionEnvio> direcciones = direccionEnvioRepository.findByUsuarioRut(existente.getUsuario().getRut());
+        for (DireccionEnvio direccion : direcciones) {
+            if (!direccion.getIdDireccion().equals(existente.getIdDireccion())) {
                 direccion.setDireccionPrincipal(false);
                 direccionEnvioRepository.save(direccion);
             }
-            existente.setDireccionPrincipal(true);
-            return direccionEnvioRepository.save(existente);
         }
-        return null;
+        existente.setDireccionPrincipal(true);
+        return direccionEnvioRepository.save(existente);
     }
 
     public DireccionEnvio desactivar(Long id){

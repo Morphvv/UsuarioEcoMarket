@@ -1,5 +1,6 @@
 package com.UsuariosP.Usuario.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class CuentaUsuarioService {
     public CuentaUsuario crear(CuentaUsuario cuentaUsuario){
         cuentaUsuario.setRol("CLIENTE");
         cuentaUsuario.setEstadoCuenta("ACTIVA");
-        cuentaUsuario.setUltimoAcceso(null);
+        cuentaUsuario.setUltimoAcceso(LocalDateTime.now());
         
         return cuentaUsuarioRepository.save(cuentaUsuario);
     }

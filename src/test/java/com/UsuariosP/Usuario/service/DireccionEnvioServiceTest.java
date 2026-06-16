@@ -39,7 +39,11 @@ class DireccionEnvioServiceTest {
     private DireccionEnvio direccionEnvio(Long idDireccion, Long idUsuario, String calle, String numero, String ciudad, String region, String codigoPostal, String referencia, Boolean direccionPrincipal, Boolean activa){
         DireccionEnvio d = new DireccionEnvio();
         d.setIdDireccion(idDireccion);
-        d.setIdUsuario(idUsuario);
+        if (idUsuario != null) {
+            Usuario usuario = new Usuario();
+            usuario.setRut(idUsuario);
+            d.setUsuario(usuario);
+        }
         d.setCalle(calle);
         d.setNumero(numero);
         d.setCiudad(ciudad);
@@ -82,8 +86,8 @@ class DireccionEnvioServiceTest {
     @Test
     void listar_RetornarDirecciones(){
         //Given
-        DireccionEnvio d1 = nuevaDireccion(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
-        DireccionEnvio d2 = nuevaDireccion(2L, 1L, "Avenida Siempre Viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
+        DireccionEnvio d1 = direccionEnvio(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
+        DireccionEnvio d2 = direccionEnvio(2L, 1L, "Avenida Siempre Viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
         when(direccionEnvioRepository.findAll()).thenReturn(Arrays.asList(d1, d2));
 
         //When
@@ -97,29 +101,29 @@ class DireccionEnvioServiceTest {
     @Test
     void listarPorUsuario_DireccionesActiva(){
         //Given
-        DireccionEnvio d1 = nuevaDireccion(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
-        DireccionEnvio d2 = nuevaDireccion(2L, 1L, "Avenida Siempre Viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
-        when(direccionEnvioRepository.findByUsuarioIdAndActivaTrue(1L)).thenReturn(Arrays.asList(d1, d2));
+        DireccionEnvio d1 = direccionEnvio(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
+        DireccionEnvio d2 = direccionEnvio(2L, 1L, "Avenida Siempre Viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
+        when(direccionEnvioRepository.findByUsuarioRutAndActivaTrue(1L)).thenReturn(Arrays.asList(d1, d2));
 
         //When
         List<DireccionEnvio> resultado = direccionEnvioService.listarPorUsuario(1L);    
 
         //Then
         assertEquals(2, resultado.size());
-        verify(direccionEnvioRepository, times(1)).findByUsuarioRut(1L);
+        verify(direccionEnvioRepository, times(1)).findByUsuarioRutAndActivaTrue(1L);
     }
 
     @Test
     void modificarDireccion_ActualizarCampos(){ //Cunaod existe una direccion
         //Given
-        DireccionEnvio direccionExistente = nuevaDireccion(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
-        DireccionEnvio direccionActualizada = nuevaDireccion(1L, 1L, "Avenida Siempre Viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
+        DireccionEnvio direccionExistente = direccionEnvio(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
+        DireccionEnvio direccionActualizada = direccionEnvio(1L, 1L, "Avenida Siempre Viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
 
         when(direccionEnvioRepository.findById(1L)).thenReturn(Optional.of(direccionExistente));
         when(direccionEnvioRepository.save(direccionExistente)).thenReturn(direccionExistente);
 
         //When
-        DireccionEnvio resultado = direccionEnvioService.modificarDireccion(1L, direccionActualizada);
+        DireccionEnvio resultado = direccionEnvioService.modificarDireccionEnvio(1L, direccionActualizada);
 
         //Then
         assertNotNull(resultado);
@@ -138,17 +142,17 @@ class DireccionEnvioServiceTest {
         Usuario propietario = new Usuario();
         propietario.setRut(12344567L);
 
-        DireccionEnvio existente = nuevaDireccion(1L, 12344567L, "Calle uwu", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
+        DireccionEnvio existente = direccionEnvio(1L, 12344567L, "Calle uwu", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
         existente.setUsuario(propietario);
-        DireccionEnvio otro = nuevaDireccion(2L, 12344567L, "Avenida siempre viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
+        DireccionEnvio otro = direccionEnvio(2L, 12344567L, "Avenida siempre viva", "456", "Santiago", "RM", "67890", "Frente al supermercado", false, true);
         otro.setUsuario(propietario);
 
-        when(direccionEnvioRepository.findById(1l)).thenReturn(Optional.of(existente));
+        when(direccionEnvioRepository.findById(1L)).thenReturn(Optional.of(existente));
         when(direccionEnvioRepository.findByUsuarioRut(12344567L)).thenReturn(Arrays.asList(existente, otro));
         when(direccionEnvioRepository.save(any(DireccionEnvio.class))).thenAnswer(invocacion -> invocacion.getArgument(0));
 
         //When
-        DireccionEnvio resultado = direccionEnvioService.marcarPrincipal(1L);
+        DireccionEnvio resultado = direccionEnvioService.marcarComoPrincipal(1L);
 
         //Then, una vez que se elige la otra se desactiva
         assertTrue(resultado.getDireccionPrincipal());
@@ -164,7 +168,7 @@ class DireccionEnvioServiceTest {
         when(direccionEnvioRepository.findById(99L)).thenReturn(Optional.empty());
 
         //When
-        DireccionEnvio resultado = direccionEnvioService.marcarPrincipal(99L);
+        DireccionEnvio resultado = direccionEnvioService.marcarComoPrincipal(99L);
 
         //Then
         assertNull(resultado);
@@ -175,13 +179,13 @@ class DireccionEnvioServiceTest {
     @Test
     void desactivarDireccion(){
         //Given 
-        DireccionEnvio existente = nuevaDireccion(1L, 12344567L, "Calle uwu", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
+        DireccionEnvio existente = direccionEnvio(1L, 12344567L, "Calle uwu", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
 
         when(direccionEnvioRepository.findById(1L)).thenReturn(Optional.of(existente));
         when(direccionEnvioRepository.save(existente)).thenReturn(existente);
 
         //When
-        DireccionEnvio resultado = direccionEnvioService.desactivarDireccion(1L);
+        DireccionEnvio resultado = direccionEnvioService.desactivar(1L);
 
         //Then
         assertNotNull(resultado);
@@ -195,7 +199,7 @@ class DireccionEnvioServiceTest {
         when(direccionEnvioRepository.findById(99L)).thenReturn(Optional.empty());
 
         //When
-        DireccionEnvio resultado = direccionEnvioService.desactivarDireccion(99L);
+        DireccionEnvio resultado = direccionEnvioService.desactivar(99L);
 
         //Then 
         assertNull(resultado);
@@ -205,7 +209,7 @@ class DireccionEnvioServiceTest {
     @Test
     void eliminarDireccion(){
         //When
-        direccionEnvioService.eliminarDireccion(1L);
+        direccionEnvioService.eliminar(1L);
 
         //Then
         verify(direccionEnvioRepository, times(1)).deleteById(1L);

@@ -42,34 +42,28 @@ public class UsuarioService {
 
     //Modificar
     public Usuario modificarUsuario(Long id, Usuario usuario){
-        Usuario existente = usuarioRepository.findById(id).orElse(null);
-            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con ese rut" + id));
-        if (existente != null) {
-            existente.setNombre(usuario.getNombre());
-            existente.setApellido(usuario.getApellido());
-            existente.setEmail(usuario.getEmail());
-            existente.setTelefono(usuario.getTelefono());
-            existente.setEstadoUsuario(usuario.getEstadoUsuario());
-        }
+        Usuario existente = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con ese rut " + id));
+        existente.setNombre(usuario.getNombre());
+        existente.setApellido(usuario.getApellido());
+        existente.setEmail(usuario.getEmail());
+        existente.setTelefono(usuario.getTelefono());
+        existente.setEstadoUsuario(usuario.getEstadoUsuario());
         return usuarioRepository.save(existente);
     }
 
     //Buscar por el rut
     public Usuario buscarPorId(Long id){
-        return usuarioRepository.findById(id).orElse(null);
-            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con rut " + id));
+        return usuarioRepository.findById(id)
+                .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con rut " + id));
     }
 
     //Desactivar por rut
     public Usuario desactivar(Long id){
-        Usuario existente = usuarioRepository.findById(id).orElse(null);
-            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con rut " + id));
-
-        if (existente != null) {
-            existente.setEstadoUsuario("INACTIVO");
-            return usuarioRepository.save(existente);
-        }
-        return null;
+        Usuario existente = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con rut " + id));
+        existente.setEstadoUsuario("INACTIVO");
+        return usuarioRepository.save(existente);
     }
 
     //Eliminar por rut 

@@ -1,0 +1,2068 @@
+[ERROR] Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.057 s <<< FAILURE! -- in com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest
+[ERROR] com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.eliminarCuenta -- Time elapsed: 0.019 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.<init>(CuentaUsuarioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.autenticarCuenta -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.<init>(CuentaUsuarioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.modificarCuenta -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.<init>(CuentaUsuarioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.desactivarCuenta -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.<init>(CuentaUsuarioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.listarCuentaUsuario -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.<init>(CuentaUsuarioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.crearCuenta -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.CuentaUsuarioControllerTest.<init>(CuentaUsuarioControllerTest.java:10)
+
+[ERROR] Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! -- in com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.desactivarDireccion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.eliminarDireccion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.modificarDireccion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.listarDirecciones -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.listarPorUsuario -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.crearDireccion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.marcarPrincipal -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.controller.DireccionEnvioControllerTest.<init>(DireccionEnvioControllerTest.java:10)
+
+[ERROR] Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.UsuariosP.Usuario.controller.MetodoPagoControllerTest
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.desactivarMetodoPago -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.listarPorUsuario -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.listarMetodosPagos -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.marcarPrincipal -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.crearMetodoPago -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.eliminarMetodoPago -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.modificarMetodoPago -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.MetodoPagoControllerTest.<init>(MetodoPagoControllerTest.java:10)
+
+[ERROR] Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.UsuariosP.Usuario.controller.SesionControllerTest
+[ERROR] com.UsuariosP.Usuario.controller.SesionControllerTest.expirarSesion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.SesionControllerTest.<init>(SesionControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.SesionControllerTest.eliminarSesion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.SesionControllerTest.<init>(SesionControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.SesionControllerTest.modificarSesion -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.SesionControllerTest.<init>(SesionControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.SesionControllerTest.listarSesiones -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.SesionControllerTest.<init>(SesionControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.SesionControllerTest.iniciarSesion -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.SesionControllerTest.<init>(SesionControllerTest.java:10)
+
+[ERROR] com.UsuariosP.Usuario.controller.SesionControllerTest.validarSesion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.SesionControllerTest.<init>(SesionControllerTest.java:10)
+
+[ERROR] Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! -- in com.UsuariosP.Usuario.controller.UsuarioControllerTest
+[ERROR] com.UsuariosP.Usuario.controller.UsuarioControllerTest.desactivarUsuario -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.UsuarioControllerTest.<init>(UsuarioControllerTest.java:9)
+
+[ERROR] com.UsuariosP.Usuario.controller.UsuarioControllerTest.eliminarUsuario -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.UsuarioControllerTest.<init>(UsuarioControllerTest.java:9)
+
+[ERROR] com.UsuariosP.Usuario.controller.UsuarioControllerTest.listarUsuarios -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.UsuarioControllerTest.<init>(UsuarioControllerTest.java:9)
+
+[ERROR] com.UsuariosP.Usuario.controller.UsuarioControllerTest.buscarUsuario -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.UsuarioControllerTest.<init>(UsuarioControllerTest.java:9)
+
+[ERROR] com.UsuariosP.Usuario.controller.UsuarioControllerTest.crearUsuario -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.UsuarioControllerTest.<init>(UsuarioControllerTest.java:9)
+
+[ERROR] com.UsuariosP.Usuario.controller.UsuarioControllerTest.modificarUsuario -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+	at com.UsuariosP.Usuario.controller.UsuarioControllerTest.<init>(UsuarioControllerTest.java:9)
+
+00:01:44.983 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.CuentaUsuarioRepositoryIT]: CuentaUsuarioRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:01:45.174 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.CuentaUsuarioRepositoryIT
+00:01:45.305 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.CuentaUsuarioRepositoryIT]: CuentaUsuarioRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:01:45.307 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.CuentaUsuarioRepositoryIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-06-16T00:01:45.649-04:00  INFO 35272 --- [Usuario] [           main] c.U.U.r.CuentaUsuarioRepositoryIT        : Starting CuentaUsuarioRepositoryIT using Java 26 with PID 35272 (started by juanp in C:\Users\juanp.PC\OneDrive\Documents\Full Stack\UsuarioM)
+2026-06-16T00:01:45.651-04:00  INFO 35272 --- [Usuario] [           main] c.U.U.r.CuentaUsuarioRepositoryIT        : The following 1 profile is active: "test"
+2026-06-16T00:01:46.439-04:00  INFO 35272 --- [Usuario] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T00:01:46.504-04:00  INFO 35272 --- [Usuario] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2026-06-16T00:01:46.884-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T00:01:46.954-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-16T00:01:47.464-04:00  INFO 35272 --- [Usuario] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T00:01:47.505-04:00  INFO 35272 --- [Usuario] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-16T00:01:47.749-04:00  INFO 35272 --- [Usuario] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-16T00:01:47.751-04:00  INFO 35272 --- [Usuario] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-16T00:01:47.775-04:00  WARN 35272 --- [Usuario] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16T00:01:47.808-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T00:01:48.849-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T00:01:48.874-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    drop table if exists cuentas_usuario cascade 
+Hibernate: 
+    drop table if exists cuentas_usuario cascade 
+2026-06-16T00:01:48.876-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    drop table if exists direcciones_envio cascade 
+Hibernate: 
+    drop table if exists direcciones_envio cascade 
+2026-06-16T00:01:48.876-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    drop table if exists metodos_pago cascade 
+Hibernate: 
+    drop table if exists metodos_pago cascade 
+2026-06-16T00:01:48.876-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    drop table if exists sesiones cascade 
+Hibernate: 
+    drop table if exists sesiones cascade 
+2026-06-16T00:01:48.877-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    drop table if exists usuarios cascade 
+Hibernate: 
+    drop table if exists usuarios cascade 
+2026-06-16T00:01:48.883-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    create table cuentas_usuario (
+        id_usuario bigint generated by default as identity,
+        ultimo_acceso timestamp(6),
+        usuario_rut bigint unique,
+        email varchar(255) not null unique,
+        estado_cuenta varchar(255) not null,
+        nombre_usuario varchar(255) not null unique,
+        password varchar(255) not null,
+        rol varchar(255) not null,
+        primary key (id_usuario)
+    )
+Hibernate: 
+    create table cuentas_usuario (
+        id_usuario bigint generated by default as identity,
+        ultimo_acceso timestamp(6),
+        usuario_rut bigint unique,
+        email varchar(255) not null unique,
+        estado_cuenta varchar(255) not null,
+        nombre_usuario varchar(255) not null unique,
+        password varchar(255) not null,
+        rol varchar(255) not null,
+        primary key (id_usuario)
+    )
+2026-06-16T00:01:48.895-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    create table direcciones_envio (
+        activa boolean,
+        direccion_principal boolean,
+        id_direccion bigint generated by default as identity,
+        usuario_id bigint,
+        calle varchar(255) not null,
+        ciudad varchar(255) not null,
+        codigo_postal varchar(255) not null,
+        comuna varchar(255) not null,
+        numero varchar(255),
+        referencia varchar(255),
+        region varchar(255) not null,
+        primary key (id_direccion)
+    )
+Hibernate: 
+    create table direcciones_envio (
+        activa boolean,
+        direccion_principal boolean,
+        id_direccion bigint generated by default as identity,
+        usuario_id bigint,
+        calle varchar(255) not null,
+        ciudad varchar(255) not null,
+        codigo_postal varchar(255) not null,
+        comuna varchar(255) not null,
+        numero varchar(255),
+        referencia varchar(255),
+        region varchar(255) not null,
+        primary key (id_direccion)
+    )
+2026-06-16T00:01:48.896-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    create table metodos_pago (
+        activo boolean,
+        fecha_expiracion date,
+        principal boolean,
+        id_metodo_pago bigint generated by default as identity,
+        usuario_id bigint,
+        alias varchar(255),
+        proveedor_pago varchar(255) not null,
+        tipo_pago varchar(255) not null,
+        titular varchar(255),
+        token_pago varchar(255),
+        ultimos_digitos varchar(255),
+        primary key (id_metodo_pago)
+    )
+Hibernate: 
+    create table metodos_pago (
+        activo boolean,
+        fecha_expiracion date,
+        principal boolean,
+        id_metodo_pago bigint generated by default as identity,
+        usuario_id bigint,
+        alias varchar(255),
+        proveedor_pago varchar(255) not null,
+        tipo_pago varchar(255) not null,
+        titular varchar(255),
+        token_pago varchar(255),
+        ultimos_digitos varchar(255),
+        primary key (id_metodo_pago)
+    )
+2026-06-16T00:01:48.897-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    create table sesiones (
+        fecha_expiracion timestamp(6),
+        fecha_inicio timestamp(6),
+        id_sesion bigint generated by default as identity,
+        id_usuario bigint not null,
+        estado_sesion varchar(255),
+        token_sesion varchar(255) not null unique,
+        primary key (id_sesion)
+    )
+Hibernate: 
+    create table sesiones (
+        fecha_expiracion timestamp(6),
+        fecha_inicio timestamp(6),
+        id_sesion bigint generated by default as identity,
+        id_usuario bigint not null,
+        estado_sesion varchar(255),
+        token_sesion varchar(255) not null unique,
+        primary key (id_sesion)
+    )
+2026-06-16T00:01:48.898-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    create table usuarios (
+        fecha_registro timestamp(6) not null,
+        rut bigint not null,
+        apellido varchar(255) not null,
+        email varchar(255) not null unique,
+        estado_usuario varchar(255) not null,
+        nombre varchar(255) not null,
+        telefono varchar(255) not null,
+        primary key (rut)
+    )
+Hibernate: 
+    create table usuarios (
+        fecha_registro timestamp(6) not null,
+        rut bigint not null,
+        apellido varchar(255) not null,
+        email varchar(255) not null unique,
+        estado_usuario varchar(255) not null,
+        nombre varchar(255) not null,
+        telefono varchar(255) not null,
+        primary key (rut)
+    )
+2026-06-16T00:01:48.899-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    alter table if exists cuentas_usuario 
+       add constraint FK51rycmunkf0vq474920d7m4j9 
+       foreign key (usuario_rut) 
+       references usuarios
+Hibernate: 
+    alter table if exists cuentas_usuario 
+       add constraint FK51rycmunkf0vq474920d7m4j9 
+       foreign key (usuario_rut) 
+       references usuarios
+2026-06-16T00:01:48.914-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    alter table if exists direcciones_envio 
+       add constraint FKk1yevux2qekdl8364gnq7oy6w 
+       foreign key (usuario_id) 
+       references usuarios
+Hibernate: 
+    alter table if exists direcciones_envio 
+       add constraint FKk1yevux2qekdl8364gnq7oy6w 
+       foreign key (usuario_id) 
+       references usuarios
+2026-06-16T00:01:48.915-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    alter table if exists metodos_pago 
+       add constraint FK6petg9p5hprht765dv1br1r6q 
+       foreign key (usuario_id) 
+       references usuarios
+Hibernate: 
+    alter table if exists metodos_pago 
+       add constraint FK6petg9p5hprht765dv1br1r6q 
+       foreign key (usuario_id) 
+       references usuarios
+2026-06-16T00:01:48.918-04:00  INFO 35272 --- [Usuario] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T00:01:48.991-04:00  INFO 35272 --- [Usuario] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-16T00:01:49.337-04:00  WARN 35272 --- [Usuario] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T00:01:49.745-04:00  INFO 35272 --- [Usuario] [           main] c.U.U.r.CuentaUsuarioRepositoryIT        : Started CuentaUsuarioRepositoryIT in 4.366 seconds (process running for 5.983)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\juanp.PC\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-06-16T00:01:50.024-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        cuentas_usuario
+        (email, estado_cuenta, nombre_usuario, password, rol, ultimo_acceso, usuario_rut, id_usuario) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cuentas_usuario
+        (email, estado_cuenta, nombre_usuario, password, rol, ultimo_acceso, usuario_rut, id_usuario) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-06-16T00:01:50.088-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.rut,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        cuentas_usuario cu1_0 
+    left join
+        usuarios u1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    where
+        cu1_0.id_usuario=?
+Hibernate: 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.rut,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        cuentas_usuario cu1_0 
+    left join
+        usuarios u1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    where
+        cu1_0.id_usuario=?
+2026-06-16T00:01:50.549-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        cu1_0.usuario_rut 
+    from
+        cuentas_usuario cu1_0 
+    where
+        cu1_0.email=?
+Hibernate: 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        cu1_0.usuario_rut 
+    from
+        cuentas_usuario cu1_0 
+    where
+        cu1_0.email=?
+2026-06-16T00:01:50.559-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        cuentas_usuario
+        (email, estado_cuenta, nombre_usuario, password, rol, ultimo_acceso, usuario_rut, id_usuario) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cuentas_usuario
+        (email, estado_cuenta, nombre_usuario, password, rol, ultimo_acceso, usuario_rut, id_usuario) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-06-16T00:01:50.561-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        cu1_0.usuario_rut 
+    from
+        cuentas_usuario cu1_0 
+    where
+        cu1_0.email=?
+Hibernate: 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        cu1_0.usuario_rut 
+    from
+        cuentas_usuario cu1_0 
+    where
+        cu1_0.email=?
+2026-06-16T00:01:50.569-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT]: DireccionEnvioRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:50.571-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT
+2026-06-16T00:01:50.573-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT]: DireccionEnvioRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:50.574-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT
+2026-06-16T00:01:50.583-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+2026-06-16T00:01:50.605-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-06-16T00:01:50.610-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+2026-06-16T00:01:50.611-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-06-16T00:01:50.615-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        null,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        usuarios u1_0 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        null,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        usuarios u1_0 
+    where
+        u1_0.rut=?
+2026-06-16T00:01:50.628-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+2026-06-16T00:01:50.630-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-06-16T00:01:50.632-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        null,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        usuarios u1_0 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        null,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        usuarios u1_0 
+    where
+        u1_0.rut=?
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.068 s <<< FAILURE! -- in com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT
+[ERROR] com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT.buscarUsuarioRut -- Time elapsed: 0.050 s <<< ERROR!
+jakarta.validation.ConstraintViolationException: 
+Validation failed for classes [com.UsuariosP.Usuario.model.DireccionEnvio] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='El codigo postal es obligatorio', propertyPath=codigoPostal, rootBeanClass=class com.UsuariosP.Usuario.model.DireccionEnvio, messageTemplate='El codigo postal es obligatorio'}
+]
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:153)
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:77)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:195)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:73)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:371)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:285)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:215)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:133)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:144)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:90)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:74)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:50)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:692)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:675)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:240)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:386)
+	at jdk.proxy2/jdk.proxy2.$Proxy158.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy2/jdk.proxy2.$Proxy168.save(Unknown Source)
+	at com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT.buscarUsuarioRut(DireccionEnvioRepositoryIT.java:55)
+
+[ERROR] com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT.buscarUsuarioRut_Activa -- Time elapsed: 0.008 s <<< ERROR!
+jakarta.validation.ConstraintViolationException: 
+Validation failed for classes [com.UsuariosP.Usuario.model.DireccionEnvio] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='El codigo postal es obligatorio', propertyPath=codigoPostal, rootBeanClass=class com.UsuariosP.Usuario.model.DireccionEnvio, messageTemplate='El codigo postal es obligatorio'}
+]
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:153)
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:77)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:195)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:73)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:371)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:285)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:215)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:133)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:144)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:90)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:74)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:50)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:692)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:675)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:240)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:386)
+	at jdk.proxy2/jdk.proxy2.$Proxy158.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy2/jdk.proxy2.$Proxy168.save(Unknown Source)
+	at com.UsuariosP.Usuario.repository.DireccionEnvioRepositoryIT.buscarUsuarioRut_Activa(DireccionEnvioRepositoryIT.java:68)
+
+2026-06-16T00:01:50.637-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT]: MetodoPagoRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:50.638-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT
+2026-06-16T00:01:50.639-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT]: MetodoPagoRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:50.639-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT
+2026-06-16T00:01:50.648-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+2026-06-16T00:01:50.649-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-06-16T00:01:50.651-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+2026-06-16T00:01:50.653-04:00 DEBUG 35272 --- [Usuario] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        usuarios
+        (apellido, email, estado_usuario, fecha_registro, nombre, telefono, rut) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! -- in com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT
+[ERROR] com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT.buscarUsuarioRut_activo -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method findByUsuarioRutActivo(long) is undefined for the type MetodoPagoRepository
+
+	at com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT.buscarUsuarioRut_activo(MetodoPagoRepositoryIT.java:68)
+
+[ERROR] com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT.buscarUsuarioRut -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	activo cannot be resolved to a variable
+
+	at com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT.nuevoMetodo(MetodoPagoRepositoryIT.java:42)
+	at com.UsuariosP.Usuario.repository.MetodoPagoRepositoryIT.buscarUsuarioRut(MetodoPagoRepositoryIT.java:52)
+
+2026-06-16T00:01:50.658-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.UsuarioRepositoryIT]: UsuarioRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:50.659-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.UsuarioRepositoryIT
+2026-06-16T00:01:50.660-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.repository.UsuarioRepositoryIT]: UsuarioRepositoryIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:50.660-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.repository.UsuarioRepositoryIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-06-16T00:01:50.683-04:00  INFO 35272 --- [Usuario] [           main] c.U.U.repository.UsuarioRepositoryIT     : Starting UsuarioRepositoryIT using Java 26 with PID 35272 (started by juanp in C:\Users\juanp.PC\OneDrive\Documents\Full Stack\UsuarioM)
+2026-06-16T00:01:50.683-04:00  INFO 35272 --- [Usuario] [           main] c.U.U.repository.UsuarioRepositoryIT     : No active profile set, falling back to 1 default profile: "default"
+2026-06-16T00:01:50.921-04:00  INFO 35272 --- [Usuario] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16T00:01:50.931-04:00  INFO 35272 --- [Usuario] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 5 JPA repository interfaces.
+2026-06-16T00:01:50.985-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-16T00:01:51.001-04:00  INFO 35272 --- [Usuario] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16T00:01:51.003-04:00  INFO 35272 --- [Usuario] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-16T00:01:51.181-04:00  INFO 35272 --- [Usuario] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73c5ffb4
+2026-06-16T00:01:51.182-04:00  INFO 35272 --- [Usuario] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-16T00:01:51.205-04:00  WARN 35272 --- [Usuario] [           main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-16T00:01:51.207-04:00  WARN 35272 --- [Usuario] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16T00:01:51.209-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/UsuariosBD]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: UsuariosBD/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-16T00:01:51.303-04:00  INFO 35272 --- [Usuario] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16T00:01:51.476-04:00  INFO 35272 --- [Usuario] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16T00:01:51.582-04:00  WARN 35272 --- [Usuario] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16T00:01:51.746-04:00  INFO 35272 --- [Usuario] [           main] c.U.U.repository.UsuarioRepositoryIT     : Started UsuarioRepositoryIT in 1.082 seconds (process running for 7.985)
+2026-06-16T00:01:51.747-04:00  WARN 35272 --- [Usuario] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-16T00:01:51.747-04:00  WARN 35272 --- [Usuario] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        usuarios u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        mp1_0.usuario_id,
+        mp1_0.id_metodo_pago,
+        mp1_0.activo,
+        mp1_0.alias,
+        mp1_0.fecha_expiracion,
+        mp1_0.principal,
+        mp1_0.proveedor_pago,
+        mp1_0.tipo_pago,
+        mp1_0.titular,
+        mp1_0.token_pago,
+        mp1_0.ultimos_digitos 
+    from
+        metodos_pago mp1_0 
+    where
+        mp1_0.usuario_id=?
+Hibernate: 
+    update
+        usuarios 
+    set
+        apellido=?,
+        email=?,
+        estado_usuario=?,
+        fecha_registro=?,
+        nombre=?,
+        telefono=? 
+    where
+        rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        usuarios u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.rut,
+        u1_0.apellido,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono 
+    from
+        cuentas_usuario cu1_0 
+    left join
+        usuarios u1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    where
+        cu1_0.usuario_rut=?
+Hibernate: 
+    select
+        u1_0.rut,
+        u1_0.apellido,
+        cu1_0.id_usuario,
+        cu1_0.email,
+        cu1_0.estado_cuenta,
+        cu1_0.nombre_usuario,
+        cu1_0.password,
+        cu1_0.rol,
+        cu1_0.ultimo_acceso,
+        u1_0.email,
+        u1_0.estado_usuario,
+        u1_0.fecha_registro,
+        u1_0.nombre,
+        u1_0.telefono,
+        d1_0.usuario_id,
+        d1_0.id_direccion,
+        d1_0.activa,
+        d1_0.calle,
+        d1_0.ciudad,
+        d1_0.codigo_postal,
+        d1_0.comuna,
+        d1_0.direccion_principal,
+        d1_0.numero,
+        d1_0.referencia,
+        d1_0.region 
+    from
+        usuarios u1_0 
+    left join
+        cuentas_usuario cu1_0 
+            on u1_0.rut=cu1_0.usuario_rut 
+    left join
+        direcciones_envio d1_0 
+            on u1_0.rut=d1_0.usuario_id 
+    where
+        u1_0.rut=?
+Hibernate: 
+    select
+        mp1_0.usuario_id,
+        mp1_0.id_metodo_pago,
+        mp1_0.activo,
+        mp1_0.alias,
+        mp1_0.fecha_expiracion,
+        mp1_0.principal,
+        mp1_0.proveedor_pago,
+        mp1_0.tipo_pago,
+        mp1_0.titular,
+        mp1_0.token_pago,
+        mp1_0.ultimos_digitos 
+    from
+        metodos_pago mp1_0 
+    where
+        mp1_0.usuario_id=?
+Hibernate: 
+    update
+        usuarios 
+    set
+        apellido=?,
+        email=?,
+        estado_usuario=?,
+        fecha_registro=?,
+        nombre=?,
+        telefono=? 
+    where
+        rut=?
+Hibernate: 
+    select
+        u1_0.rut 
+    from
+        usuarios u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+Hibernate: 
+    select
+        u1_0.rut 
+    from
+        usuarios u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+[ERROR] Tests run: 9, Failures: 1, Errors: 4, Skipped: 0, Time elapsed: 0.232 s <<< FAILURE! -- in com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest
+[ERROR] com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.eliminarCuenta -- Time elapsed: 0.188 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method eliminarCuenta(long) is undefined for the type CuentaUsuarioService
+
+	at com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.eliminarCuenta(CuentaUsuarioServiceTest.java:179)
+
+[ERROR] com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.desactivarCuenta_CambiarEstado -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method desactivarCuenta(long) is undefined for the type CuentaUsuarioService
+
+	at com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.desactivarCuenta_CambiarEstado(CuentaUsuarioServiceTest.java:155)
+
+[ERROR] com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.crear_AsignarRol_Estado_UltimoAcceso -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:159)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:55)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:40)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:34)
+	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:325)
+	at com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.crear_AsignarRol_Estado_UltimoAcceso(CuentaUsuarioServiceTest.java:60)
+
+[ERROR] com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.modificarCuenta_ActualizarCampos -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method modificarCuenta(long, CuentaUsuario) is undefined for the type CuentaUsuarioService
+
+	at com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.modificarCuenta_ActualizarCampos(CuentaUsuarioServiceTest.java:89)
+
+[ERROR] com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.desactivarCuenta_RetornarNull -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method desactivarCuenta(long) is undefined for the type CuentaUsuarioService
+
+	at com.UsuariosP.Usuario.service.CuentaUsuarioServiceTest.desactivarCuenta_RetornarNull(CuentaUsuarioServiceTest.java:169)
+
+[ERROR] Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.078 s <<< FAILURE! -- in com.UsuariosP.Usuario.service.DireccionEnvioServiceTest
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.desactivarDireccion -- Time elapsed: 0.061 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method desactivarDireccion(long) is undefined for the type DireccionEnvioService
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.desactivarDireccion(DireccionEnvioServiceTest.java:178)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.listarPorUsuario_DireccionesActiva -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method findByUsuarioIdAndActivaTrue(long) is undefined for the type DireccionEnvioRepository
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.listarPorUsuario_DireccionesActiva(DireccionEnvioServiceTest.java:100)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.eliminarDireccion -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method eliminarDireccion(long) is undefined for the type DireccionEnvioService
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.eliminarDireccion(DireccionEnvioServiceTest.java:208)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.modificarDireccion_ActualizarCampos -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method modificarDireccion(long, DireccionEnvio) is undefined for the type DireccionEnvioService
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.modificarDireccion_ActualizarCampos(DireccionEnvioServiceTest.java:115)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.listar_RetornarDirecciones -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.listar_RetornarDirecciones(DireccionEnvioServiceTest.java:85)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.crear_AsignarDireccionPrincipal_Activa -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.direccionEnvio(DireccionEnvioServiceTest.java:42)
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.crear_AsignarDireccionPrincipal_Activa(DireccionEnvioServiceTest.java:57)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.desactivarDireccion_null -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method desactivarDireccion(long) is undefined for the type DireccionEnvioService
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.desactivarDireccion_null(DireccionEnvioServiceTest.java:198)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.marcarPrincipal_Null -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method marcarPrincipal(long) is undefined for the type DireccionEnvioService
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.marcarPrincipal_Null(DireccionEnvioServiceTest.java:167)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.crear_SinDireccionPrincipal_Activa -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.direccionEnvio(DireccionEnvioServiceTest.java:42)
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.crear_SinDireccionPrincipal_Activa(DireccionEnvioServiceTest.java:71)
+
+[ERROR] com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.marcarPrincipal -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method marcarPrincipal(long) is undefined for the type DireccionEnvioService
+
+	at com.UsuariosP.Usuario.service.DireccionEnvioServiceTest.marcarPrincipal(DireccionEnvioServiceTest.java:141)
+
+[ERROR] Tests run: 10, Failures: 0, Errors: 9, Skipped: 0, Time elapsed: 0.067 s <<< FAILURE! -- in com.UsuariosP.Usuario.service.MetodoPagoServiceTest
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.listar_RetornarMetodosPago -- Time elapsed: 0.055 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type MetodoPago
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.nuevoMetodoPago(MetodoPagoServiceTest.java:35)
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.listar_RetornarMetodosPago(MetodoPagoServiceTest.java:81)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.listarPorUsuario_RetornarMetodosActivo -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method findByUsuarioRutAndActivoTrue(Long) in the type MetodoPagoRepository is not applicable for the arguments (long, boolean)
+	The method findByUsuarioRutAndActivoTrue(Long) in the type MetodoPagoRepository is not applicable for the arguments (long, boolean)
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.listarPorUsuario_RetornarMetodosActivo(MetodoPagoServiceTest.java:97)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.modificarMetodoPago_ActualizarCampos -- Time elapsed: 0 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.modificarMetodoPago_ActualizarCampos(MetodoPagoServiceTest.java:110)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.desactivar_Null -- Time elapsed: 0.001 s <<< ERROR!
+com.UsuariosP.Usuario.exception.RecursoNoEncontradoException: No existe un metodo de pago con id 99
+	at com.UsuariosP.Usuario.service.MetodoPagoService.lambda$2(MetodoPagoService.java:71)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:407)
+	at com.UsuariosP.Usuario.service.MetodoPagoService.desactivar(MetodoPagoService.java:71)
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.desactivar_Null(MetodoPagoServiceTest.java:187)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.marcarPrincipal_metodo -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.marcarPrincipal_metodo(MetodoPagoServiceTest.java:131)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.crear_AsignarPrincipal -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type MetodoPago
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.nuevoMetodoPago(MetodoPagoServiceTest.java:35)
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.crear_AsignarPrincipal(MetodoPagoServiceTest.java:67)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.marcarPrincipal_Null -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method marcarPrincipal(long) is undefined for the type MetodoPagoService
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.marcarPrincipal_Null(MetodoPagoServiceTest.java:157)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.crear_AsignarActivo_Principal -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type MetodoPago
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.nuevoMetodoPago(MetodoPagoServiceTest.java:35)
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.crear_AsignarActivo_Principal(MetodoPagoServiceTest.java:51)
+
+[ERROR] com.UsuariosP.Usuario.service.MetodoPagoServiceTest.desacrtivar_DejarActivo -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+
+	at com.UsuariosP.Usuario.service.MetodoPagoServiceTest.desacrtivar_DejarActivo(MetodoPagoServiceTest.java:168)
+
+[ERROR] Tests run: 10, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.072 s <<< FAILURE! -- in com.UsuariosP.Usuario.service.SesionServiceTest
+[ERROR] com.UsuariosP.Usuario.service.SesionServiceTest.cerrarSesion_null -- Time elapsed: 0.002 s <<< ERROR!
+com.UsuariosP.Usuario.exception.RecursoNoEncontradoException: No existe una sesion con id 99
+	at com.UsuariosP.Usuario.service.SesionService.lambda$1(SesionService.java:56)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:407)
+	at com.UsuariosP.Usuario.service.SesionService.cerrarSesion(SesionService.java:56)
+	at com.UsuariosP.Usuario.service.SesionServiceTest.cerrarSesion_null(SesionServiceTest.java:141)
+
+2026-06-16T00:01:52.338-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.UsuarioApplicationTests]: UsuarioApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:52.343-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.UsuarioApplicationTests
+2026-06-16T00:01:52.344-04:00  INFO 35272 --- [Usuario] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.UsuariosP.Usuario.UsuarioApplicationTests]: UsuarioApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-16T00:01:52.345-04:00  INFO 35272 --- [Usuario] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.UsuariosP.Usuario.UsuarioApplication for test class com.UsuariosP.Usuario.UsuarioApplicationTests
+[ERROR] Failures: 
+[ERROR]   CuentaUsuarioServiceTest.crear_AsignarRol_Estado_UltimoAcceso:60 expected: not <null>
+[ERROR] Errors: 
+[ERROR]   CuentaUsuarioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   CuentaUsuarioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   CuentaUsuarioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   CuentaUsuarioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   CuentaUsuarioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   CuentaUsuarioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   MetodoPagoControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   SesionControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   SesionControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   SesionControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   SesionControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   SesionControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   SesionControllerTest.<init>:10  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   UsuarioControllerTest.<init>:9  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   UsuarioControllerTest.<init>:9  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   UsuarioControllerTest.<init>:9  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   UsuarioControllerTest.<init>:9  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   UsuarioControllerTest.<init>:9  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   UsuarioControllerTest.<init>:9  Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.boot.test.mock.mockito cannot be resolved
+	WebMvcTest cannot be resolved to a type
+	MockBean cannot be resolved to a type
+
+[ERROR]   DireccionEnvioRepositoryIT.buscarUsuarioRut:55 ╗ ConstraintViolation Validation failed for classes [com.UsuariosP.Usuario.model.DireccionEnvio] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='El codigo postal es obligatorio', propertyPath=codigoPostal, rootBeanClass=class com.UsuariosP.Usuario.model.DireccionEnvio, messageTemplate='El codigo postal es obligatorio'}
+]
+[ERROR]   DireccionEnvioRepositoryIT.buscarUsuarioRut_Activa:68 ╗ ConstraintViolation Validation failed for classes [com.UsuariosP.Usuario.model.DireccionEnvio] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='El codigo postal es obligatorio', propertyPath=codigoPostal, rootBeanClass=class com.UsuariosP.Usuario.model.DireccionEnvio, messageTemplate='El codigo postal es obligatorio'}
+]
+[ERROR]   MetodoPagoRepositoryIT.buscarUsuarioRut:52->nuevoMetodo:42  Unresolved compilation problem: 
+	activo cannot be resolved to a variable
+
+[ERROR]   MetodoPagoRepositoryIT.buscarUsuarioRut_activo:68  Unresolved compilation problem: 
+	The method findByUsuarioRutActivo(long) is undefined for the type MetodoPagoRepository
+
+[ERROR]   CuentaUsuarioServiceTest.desactivarCuenta_CambiarEstado:155  Unresolved compilation problem: 
+	The method desactivarCuenta(long) is undefined for the type CuentaUsuarioService
+
+[ERROR]   CuentaUsuarioServiceTest.desactivarCuenta_RetornarNull:169  Unresolved compilation problem: 
+	The method desactivarCuenta(long) is undefined for the type CuentaUsuarioService
+
+[ERROR]   CuentaUsuarioServiceTest.eliminarCuenta:179  Unresolved compilation problem: 
+	The method eliminarCuenta(long) is undefined for the type CuentaUsuarioService
+
+[ERROR]   CuentaUsuarioServiceTest.modificarCuenta_ActualizarCampos:89  Unresolved compilation problem: 
+	The method modificarCuenta(long, CuentaUsuario) is undefined for the type CuentaUsuarioService
+
+[ERROR]   DireccionEnvioServiceTest.crear_AsignarDireccionPrincipal_Activa:57->direccionEnvio:42  Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioServiceTest.crear_SinDireccionPrincipal_Activa:71->direccionEnvio:42  Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type DireccionEnvio
+
+[ERROR]   DireccionEnvioServiceTest.desactivarDireccion:178  Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method desactivarDireccion(long) is undefined for the type DireccionEnvioService
+
+[ERROR]   DireccionEnvioServiceTest.desactivarDireccion_null:198  Unresolved compilation problem: 
+	The method desactivarDireccion(long) is undefined for the type DireccionEnvioService
+
+[ERROR]   DireccionEnvioServiceTest.eliminarDireccion:208  Unresolved compilation problem: 
+	The method eliminarDireccion(long) is undefined for the type DireccionEnvioService
+
+[ERROR]   DireccionEnvioServiceTest.listarPorUsuario_DireccionesActiva:100  Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method findByUsuarioIdAndActivaTrue(long) is undefined for the type DireccionEnvioRepository
+
+[ERROR]   DireccionEnvioServiceTest.listar_RetornarDirecciones:85  Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+
+[ERROR]   DireccionEnvioServiceTest.marcarPrincipal:141  Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method marcarPrincipal(long) is undefined for the type DireccionEnvioService
+
+[ERROR]   DireccionEnvioServiceTest.marcarPrincipal_Null:167  Unresolved compilation problem: 
+	The method marcarPrincipal(long) is undefined for the type DireccionEnvioService
+
+[ERROR]   DireccionEnvioServiceTest.modificarDireccion_ActualizarCampos:115  Unresolved compilation problems: 
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method nuevaDireccion(long, long, String, String, String, String, String, String, boolean, boolean) is undefined for the type DireccionEnvioServiceTest
+	The method modificarDireccion(long, DireccionEnvio) is undefined for the type DireccionEnvioService
+
+[ERROR]   MetodoPagoServiceTest.crear_AsignarActivo_Principal:51->nuevoMetodoPago:35  Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type MetodoPago
+
+[ERROR]   MetodoPagoServiceTest.crear_AsignarPrincipal:67->nuevoMetodoPago:35  Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type MetodoPago
+
+[ERROR]   MetodoPagoServiceTest.desacrtivar_DejarActivo:168  Unresolved compilation problem: 
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+
+[ERROR]   MetodoPagoServiceTest.desactivar_Null:187 ╗ RecursoNoEncontrado No existe un metodo de pago con id 99
+[ERROR]   MetodoPagoServiceTest.listarPorUsuario_RetornarMetodosActivo:97  Unresolved compilation problems: 
+	The method findByUsuarioRutAndActivoTrue(Long) in the type MetodoPagoRepository is not applicable for the arguments (long, boolean)
+	The method findByUsuarioRutAndActivoTrue(Long) in the type MetodoPagoRepository is not applicable for the arguments (long, boolean)
+
+[ERROR]   MetodoPagoServiceTest.listar_RetornarMetodosPago:81->nuevoMetodoPago:35  Unresolved compilation problem: 
+	The method setIdUsuario(Long) is undefined for the type MetodoPago
+
+[ERROR]   MetodoPagoServiceTest.marcarPrincipal_Null:157  Unresolved compilation problem: 
+	The method marcarPrincipal(long) is undefined for the type MetodoPagoService
+
+[ERROR]   MetodoPagoServiceTest.marcarPrincipal_metodo:131  Unresolved compilation problems: 
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+
+[ERROR]   MetodoPagoServiceTest.modificarMetodoPago_ActualizarCampos:110  Unresolved compilation problem: 
+	The method nuevoMetodo(long, String, boolean, boolean) is undefined for the type MetodoPagoServiceTest
+
+[ERROR]   SesionServiceTest.cerrarSesion_null:141 ╗ RecursoNoEncontrado No existe una sesion con id 99
+[ERROR] Tests run: 89, Failures: 1, Errors: 60, Skipped: 0
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.5:test (default-test) on project Usuario: There are test failures.
+[ERROR] 
+[ERROR] See C:\Users\juanp.PC\OneDrive\Documents\Full Stack\UsuarioM\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -31,8 +31,14 @@ class MetodoPagoServiceTest {
     //Metodo de pago para prueba
     private MetodoPago nuevoMetodoPago(Long idMetodoPago, Long idUsuario, String tipoPago, String proveedorPago, String tokenPago, String ultimosDigitos, String alias, Date fechaExpiracion, String titular, Boolean activo, Boolean principal){
         MetodoPago m = new MetodoPago();
-        ((MetodoPago) m).setIdMetodoPago(idMetodoPago);
-        m.setIdUsuario(idUsuario);
+        if (idMetodoPago != null) {
+            m.setIdMetodoPago(idMetodoPago);
+        }
+        if (idUsuario != null) {
+            Usuario usuario = new Usuario();
+            usuario.setRut(idUsuario);
+            m.setUsuario(usuario);
+        }
         m.setTipoPago(tipoPago);
         m.setProveedorPago(proveedorPago);
         m.setTokenPago(tokenPago);
@@ -94,21 +100,21 @@ class MetodoPagoServiceTest {
     void listarPorUsuario_RetornarMetodosActivo(){
         //Given
         MetodoPago m1 = nuevoMetodoPago(1L, 1L, "Tarjeta de Crédito", "Visa", "token123", "1234", "Mi Visa", Date.valueOf("2025-12-31"), "Juan Perez", true, true);
-        when(metodoPagoRepository.findByUsuarioRutAndActivoTrue(1L, true)).thenReturn(Arrays.asList(m1));
+        when(metodoPagoRepository.findByUsuarioRutAndActivoTrue(1L)).thenReturn(Arrays.asList(m1));
 
         //When
         List<MetodoPago> resultado = metodoPagoService.listarPorUsuario(1L);
 
         //Then
         assertEquals(1, resultado.size());
-        verify(metodoPagoRepository, times(1)).findByUsuarioRutAndActivoTrue(1L, true);
+        verify(metodoPagoRepository, times(1)).findByUsuarioRutAndActivoTrue(1L);
     }
 
     @Test
     void modificarMetodoPago_ActualizarCampos(){ //Cuando existe el metodo
         //Given
-        MetodoPago metodoExistente = nuevoMetodo(1L, "CREDITO", false, true);
-        MetodoPago metodoActualizado = nuevoMetodoPago(null, null, null, null, null, null, null, null, null, null, null);
+        MetodoPago metodoExistente = nuevoMetodoPago(1L, 1L, "CREDITO", "Transbank", "token123", "1234", "Mi Visa", Date.valueOf("2025-12-31"), "Juan Perez", true, false);
+        MetodoPago metodoActualizado = nuevoMetodoPago(null, null, "DEBITO", null, null, null, null, null, null, null, null);
 
         when(metodoPagoRepository.findById(1L)).thenReturn(Optional.of(metodoExistente));
         when(metodoPagoRepository.save(metodoExistente)).thenReturn(metodoExistente);
@@ -128,9 +134,9 @@ class MetodoPagoServiceTest {
         Usuario propietario = new Usuario();
         propietario.setRut(12345678L);
 
-        MetodoPago existente = nuevoMetodo(1L, "CREDITO", false, true);
+        MetodoPago existente = nuevoMetodoPago(1L, 12345678L, "CREDITO", "Transbank", "token123", "1234", "Mi Visa", Date.valueOf("2025-12-31"), "Juan Perez", true, false);
         existente.setUsuario(propietario);
-        MetodoPago otro = nuevoMetodo(2L, "DEBITO", true, true);
+        MetodoPago otro = nuevoMetodoPago(2L, 12345678L, "DEBITO", "Transbank", "token456", "5678", "Mi MasterCard", Date.valueOf("2025-12-31"), "Juan Perez", true, true);
         otro.setUsuario(propietario);
 
         when(metodoPagoRepository.findById(1L)).thenReturn(Optional.of(existente));
@@ -154,7 +160,7 @@ class MetodoPagoServiceTest {
         when(metodoPagoRepository.findById(99L)).thenReturn(Optional.empty());
 
         //When
-        MetodoPago resultado = metodoPagoService.marcarPrincipal(99L);
+        MetodoPago resultado = metodoPagoService.marcarComoPrincipal(99L);
 
         //Then 
         assertNull(resultado);
@@ -163,9 +169,9 @@ class MetodoPagoServiceTest {
     }
 
     @Test
-    void desacrtivar_DejarActivo(){ //Cuando existe un metodo
+    void desactivar_DejarActivo(){ //Cuando existe un metodo
         //Given
-        MetodoPago existente = nuevoMetodo(1L, "CREDITO", false, true);
+        MetodoPago existente = nuevoMetodoPago(1L, 1L, "CREDITO", "Transbank", "token123", "1234", "Mi Visa", Date.valueOf("2025-12-31"), "Juan Perez", true, true);
         when(metodoPagoRepository.findById(1L)).thenReturn(Optional.of(existente));
         when(metodoPagoRepository.save(existente)).thenReturn(existente);
 

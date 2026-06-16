@@ -3,6 +3,8 @@ package com.UsuariosP.Usuario.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,13 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.Sesion;
 import com.UsuariosP.Usuario.service.SesionService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("api/v1/sesion")
 @CrossOrigin(origins = "*")
+@Tag(name = "Sesiones", description = "Gestion de sesiones")
 
 public class SesionController {
 
@@ -45,7 +48,7 @@ public class SesionController {
 
     @GetMapping("/validar/{id}")
     public ResponseEntity<Sesion> validarSesion(@PathVariable Long id){
-        Sesion sesion = sesionService.validarSession(id);
+        Sesion sesion = sesionService.validarSesion(id);
         if(sesion == null){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }

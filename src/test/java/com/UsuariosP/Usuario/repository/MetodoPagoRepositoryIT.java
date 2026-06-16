@@ -34,7 +34,7 @@ class MetodoPagoRepositoryIT {
         return u;
     }
 
-    private MetodoPago nuevoMetodo(Usuario usuario, String tipoPago, boolean Activo){
+    private MetodoPago nuevoMetodo(Usuario usuario, String tipoPago, boolean activo){
         MetodoPago m = new MetodoPago();
         m.setUsuario(usuario);   // <- enlaza con el dueno (llena usuario_id)
         m.setTipoPago(tipoPago);
@@ -65,7 +65,7 @@ class MetodoPagoRepositoryIT {
         metodoPagoRepository.save(nuevoMetodo(propietario, "CREDITO", true));
         metodoPagoRepository.save(nuevoMetodo(propietario, "DEBITO", false));
 
-        List<MetodoPago> activos = metodoPagoRepository.findByUsuarioRutActivo(88888888L);
+        List<MetodoPago> activos = metodoPagoRepository.findByUsuarioRutAndActivoTrue(88888888L);
 
         assertThat(activos).hasSize(1);
         assertThat(activos.get(0).getTipoPago()).isEqualTo("CREDITO");

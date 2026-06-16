@@ -15,11 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.MetodoPago;
 import com.UsuariosP.Usuario.service.MetodoPagoService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("api/v1/metodoPago")
 @CrossOrigin(origins = "*")
+@Tag(name = "Metodos de pago", description = "Gestion de metodos de pago")
 
 public class MetodoPagoController {
 
