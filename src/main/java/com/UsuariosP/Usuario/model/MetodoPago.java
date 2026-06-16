@@ -13,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "metodos_pago")
@@ -30,7 +31,10 @@ public class MetodoPago {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    @NotBlank(message = "El tipo de pago es obligatorio")
     private String tipoPago;
+
+    @NotBlank(message = "El proveedor de pago es obligatorio")
     private String proveedorPago;
     private String tokenPago;
     private String ultimosDigitos;

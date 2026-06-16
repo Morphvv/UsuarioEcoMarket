@@ -9,6 +9,7 @@ import com.UsuariosP.Usuario.model.DireccionEnvio;
 import com.UsuariosP.Usuario.repository.DireccionEnvioRepository;
 
 import jakarta.transaction.Transactional;
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 
 @Service
 @Transactional
@@ -36,6 +37,7 @@ public class DireccionEnvioService {
 
     public DireccionEnvio modificarDireccionEnvio(Long id, DireccionEnvio direccionEnvio){
         DireccionEnvio existente = direccionEnvioRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe una direccion con id " + id));
 
         if (existente != null) {
             existente.setCalle(direccionEnvio.getCalle());
@@ -55,7 +57,8 @@ public class DireccionEnvioService {
 
     public DireccionEnvio marcarComoPrincipal(Long id){
         DireccionEnvio existente = direccionEnvioRepository.findById(id).orElse(null);
-
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe una direccion con id " + id));
+            
         if (existente != null){
             List<DireccionEnvio> direcciones = direccionEnvioRepository.findByUsuarioRut(existente.getUsuario().getRut());
             for (DireccionEnvio direccion : direcciones) {

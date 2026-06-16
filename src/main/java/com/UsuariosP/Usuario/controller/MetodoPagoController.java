@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.MetodoPago;
 import com.UsuariosP.Usuario.service.MetodoPagoService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("api/v1/metodoPago")
@@ -26,7 +27,7 @@ public class MetodoPagoController {
     private MetodoPagoService metodoPagoService;
 
     @PostMapping("/crear")
-    public MetodoPago crearMetodoPago(@RequestBody MetodoPago metodoPago){
+    public MetodoPago crearMetodoPago(@Valid @RequestBody MetodoPago metodoPago){
         return metodoPagoService.crear(metodoPago);
     }
 
@@ -41,7 +42,7 @@ public class MetodoPagoController {
     }
 
     @PutMapping("/modificar/{id}")
-    public MetodoPago modificarMetodoPago(@PathVariable Long id, @RequestBody MetodoPago metodoPago){
+    public MetodoPago modificarMetodoPago(@Valid @PathVariable Long id, @RequestBody MetodoPago metodoPago){
         return metodoPagoService.modificarMetodoPago(id, metodoPago);
     }
     

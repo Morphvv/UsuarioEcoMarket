@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.repository.UsuarioRepository;
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
+
 
 @Service
 @Transactional
@@ -41,7 +43,7 @@ public class UsuarioService {
     //Modificar
     public Usuario modificarUsuario(Long id, Usuario usuario){
         Usuario existente = usuarioRepository.findById(id).orElse(null);
-
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con ese rut" + id));
         if (existente != null) {
             existente.setNombre(usuario.getNombre());
             existente.setApellido(usuario.getApellido());
@@ -55,11 +57,13 @@ public class UsuarioService {
     //Buscar por el rut
     public Usuario buscarPorId(Long id){
         return usuarioRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con rut " + id));
     }
 
     //Desactivar por rut
     public Usuario desactivar(Long id){
         Usuario existente = usuarioRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un usuario con rut " + id));
 
         if (existente != null) {
             existente.setEstadoUsuario("INACTIVO");

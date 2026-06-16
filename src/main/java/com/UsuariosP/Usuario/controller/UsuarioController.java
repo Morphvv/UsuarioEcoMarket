@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.service.UsuarioService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("api/v1/usuarios")
 @CrossOrigin(origins = "*")
@@ -26,7 +28,7 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @PostMapping("/crear")
-    public Usuario crearUsuario(@RequestBody Usuario usuario){
+    public Usuario crearUsuario(@Valid @RequestBody Usuario usuario){
         return usuarioService.crear(usuario);
     }
 
@@ -41,7 +43,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/modificar/{id}")
-    public Usuario modificarUsuario(@PathVariable Long id, @RequestBody Usuario usuario){
+    public Usuario modificarUsuario(@Valid @PathVariable Long id, @RequestBody Usuario usuario){
         return usuarioService.modificarUsuario(id, usuario);
     }
 

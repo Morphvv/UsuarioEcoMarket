@@ -10,6 +10,7 @@ import com.UsuariosP.Usuario.model.Sesion;
 import com.UsuariosP.Usuario.repository.SesionRepository;
 
 import jakarta.transaction.Transactional;
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 
 @Service
 @Transactional
@@ -31,6 +32,7 @@ public class SesionService {
 
     public Sesion modificarSesion(Long id, Sesion sesion){
         Sesion existente = sesionRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe una sesion con id " + id));
 
         if (existente != null) {
             existente.setTokenSesion(sesion.getTokenSesion());
@@ -54,7 +56,7 @@ public class SesionService {
 
     public Sesion cerrarSesion(Long id){
         Sesion existente = sesionRepository.findById(id).orElse(null);
-
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe una sesion con id " + id));
         if (existente != null) {
             existente.setEstadoSesion("INACTIVA");
             return sesionRepository.save(existente);

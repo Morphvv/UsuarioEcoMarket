@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.Sesion;
 import com.UsuariosP.Usuario.service.SesionService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("api/v1/sesion")
@@ -26,7 +29,7 @@ public class SesionController {
     private SesionService sesionService;
 
     @PostMapping("/iniciar")
-    public Sesion iniciarSesion(@RequestBody Sesion sesion){
+    public Sesion iniciarSesion(@Valid @RequestBody Sesion sesion){
         return sesionService.iniciarSesion(sesion);
     }
 
@@ -36,13 +39,17 @@ public class SesionController {
     }
 
     @PutMapping("/modificar/{id}")
-    public Sesion modificarSesion(@PathVariable Long id, @RequestBody Sesion sesion){
+    public Sesion modificarSesion(@Valid @PathVariable Long id, @RequestBody Sesion sesion){
         return sesionService.modificarSesion(id, sesion);
     }
 
     @GetMapping("/validar/{id}")
-    public Sesion validarSesion(@PathVariable Long id){
-        return sesionService.validarSesion(id);
+    public ResponseEntity<Sesion> validarSesion(@PathVariable Long id){
+        Sesion sesion = sesionService.validarSession(id);
+        if(sesion == null){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        return ResponseEntity.ok(sesion);
     }
 
     @PutMapping("/expirar/{id}")

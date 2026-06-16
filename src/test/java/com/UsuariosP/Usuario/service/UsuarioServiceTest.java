@@ -21,6 +21,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.repository.UsuarioRepository;
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 
 @ExtendWith(MockitoExtension.class)
 class UsuarioServiceTest {
@@ -87,7 +88,8 @@ class UsuarioServiceTest {
         Long rut = 123456781L;
         Usuario usuarioEsperado = nuevoUsuario(rut, "Pepe", "Tapia", "pepetapiaaa@gmail.com", "5691234567", null, null);
         when(usuarioRepository.findById(rut)).thenReturn(Optional.of(usuarioEsperado));
-
+        when(usuarioRepository.findById(99999999L)).thenReturn(Optional.empty());
+        
         //When 
         Usuario resultado = usuarioService.buscarPorRut(rut);
 

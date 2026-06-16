@@ -9,6 +9,7 @@ import com.UsuariosP.Usuario.model.MetodoPago;
 import com.UsuariosP.Usuario.repository.MetodoPagoRepository;
 
 import jakarta.transaction.Transactional;
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 
 @Service
 @Transactional
@@ -37,6 +38,7 @@ public class MetodoPagoService {
 
     public MetodoPago modificarMetodoPago(Long id, MetodoPago metodoPago){
         MetodoPago existente = metodoPagoRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un metodo de pago con id " + id));
 
         if (existente != null) {
             existente.setTipoPago(metodoPago.getTipoPago());
@@ -56,6 +58,7 @@ public class MetodoPagoService {
 
     public MetodoPago marcarComoPrincipal(Long id){
         MetodoPago existente = metodoPagoRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un metodo de pago con id " + id));
 
         if (existente != null){
             List<MetodoPago> metodos = metodoPagoRepository.findByUsuarioRut(existente.getUsuario().getRut());
@@ -72,6 +75,7 @@ public class MetodoPagoService {
 
     public MetodoPago desactivar(Long id){
         MetodoPago existente = metodoPagoRepository.findById(id).orElse(null);
+            .orElseThrow(() -> new RecursoNoEncontradoException("No existe un metodo de pago con id " + id));
 
         if (existente != null) {
             existente.setActivo(false);

@@ -12,6 +12,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,18 +26,24 @@ import lombok.NoArgsConstructor;
 @Table(name = "usuarios")
 public class Usuario {
     @Id
+    @NotNull(message="El rut es obligatorio")
     private Long rut;
 
     @Column(nullable = false)
+    @NotBlank(message= "El nombre es obligatorio")
     private String nombre;
 
     @Column(nullable = false)
+    @NotBlank(message= "El apellido es obligatorio")
     private String apellido;
 
     @Column(nullable = false, unique = true)
+    @NotBlank(message= "El email es obligatorio")
+    @Email(message= "El formato de email es invalido")
     private String email;
 
     @Column(nullable = false)
+    @NotBlank(message= "El telefono es obligatorio")
     private String telefono;
 
     @Column(nullable = false)

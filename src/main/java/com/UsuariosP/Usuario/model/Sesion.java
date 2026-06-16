@@ -13,6 +13,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "sesiones")
@@ -27,9 +29,11 @@ public class Sesion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSesion;
 
+    @NotNull(message = "El id del usuario es obligatorio")
     private Long idUsuario;
 
     @Column(nullable = false, unique = true)
+    @NotBlank(message = "El token de sesion es obligatorio")
     private String tokenSesion;
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaExpiracion;

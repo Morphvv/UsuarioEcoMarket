@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "direcciones_envio")
@@ -30,11 +31,21 @@ public class DireccionEnvio {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    @NotBlank(message = "La calle es obligatoria")
     private String calle;
+
     private String numero;
+
+    @NotBlank(message = "La comuna es obligatoria")
     private String comuna;
+
+    @NotBlank(message = "La ciudad es obligatoria")
     private String ciudad;
+
+    @NotBlank(message = "La region es obligatoria")
     private String region;
+
+    @NotBlank(message = "El codigo postal es obligatorio")
     private String codigoPostal;
     private String referencia;
     private Boolean direccionPrincipal;

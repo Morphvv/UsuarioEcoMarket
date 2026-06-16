@@ -14,6 +14,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
 
 @Data
 @AllArgsConstructor
@@ -28,6 +29,7 @@ public class CuentaUsuario {
     private Long idUsuario;
 
     @Column(nullable = false, unique = true)
+    @NotBlank(message = "El nombre de usuario es obligatorio")
     private String nombreUsuario;
 
     @Column(nullable = false, unique = true)

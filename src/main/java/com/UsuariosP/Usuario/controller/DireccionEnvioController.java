@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.DireccionEnvio;
 import com.UsuariosP.Usuario.service.DireccionEnvioService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/direccionEnvio")
@@ -25,7 +26,7 @@ public class DireccionEnvioController {
     private DireccionEnvioService direccionEnvioService;
 
     @PostMapping("/crear")
-    public DireccionEnvio crearDireccionEnvio(@RequestBody DireccionEnvio direccionEnvio){
+    public DireccionEnvio crearDireccionEnvio(@Valid @RequestBody DireccionEnvio direccionEnvio){
         return direccionEnvioService.crear(direccionEnvio);
     }
 
@@ -40,7 +41,7 @@ public class DireccionEnvioController {
     }
 
     @PutMapping("/modificar/{id}")
-    public DireccionEnvio modificarDireccionEnvio(@PathVariable Long id, @RequestBody DireccionEnvio direccionEnvio){
+    public DireccionEnvio modificarDireccionEnvio(@Valid @PathVariable Long id, @RequestBody DireccionEnvio direccionEnvio){
         return direccionEnvioService.modificarDireccionEnvio(id, direccionEnvio);
     }
 
