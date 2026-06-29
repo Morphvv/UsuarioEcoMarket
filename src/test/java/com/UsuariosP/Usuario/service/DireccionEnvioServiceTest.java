@@ -2,6 +2,7 @@ package com.UsuariosP.Usuario.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -22,6 +23,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 import com.UsuariosP.Usuario.model.DireccionEnvio;
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.repository.DireccionEnvioRepository;
@@ -84,6 +86,20 @@ class DireccionEnvioServiceTest {
     }
 
     @Test
+    void crear_PrincipalNull_Activa(){
+        //Given
+        DireccionEnvio entrada = direccionEnvio(null, 1L, "Calle x", "10", "Santiago", "RM", "8000", "ref", null, true);
+        when(direccionEnvioRepository.save(any(DireccionEnvio.class))).thenAnswer(invocacion -> invocacion.getArgument(0));
+
+        //When
+        DireccionEnvio resultado = direccionEnvioService.crear(entrada);
+
+        //Then
+        assertFalse(resultado.getDireccionPrincipal());
+        assertTrue(resultado.getActiva());
+    }
+
+    @Test
     void listar_RetornarDirecciones(){
         //Given
         DireccionEnvio d1 = direccionEnvio(1L, 1L, "Calle Falsa", "123", "Santiago", "RM", "12345", "Cerca del parque", true, true);
@@ -134,6 +150,15 @@ class DireccionEnvioServiceTest {
         assertEquals("67890", resultado.getCodigoPostal());
         assertEquals("Frente al supermercado", resultado.getReferencia());
         verify(direccionEnvioRepository, times(1)).save(direccionExistente);
+    }
+
+    @Test
+    void modificarDireccion_NoExiste_LanzaExcepcion(){ //Cuando no existe la direccion lanza excepcion
+        //Given
+        when(direccionEnvioRepository.findById(99L)).thenReturn(Optional.empty());
+
+        //When - Then
+        assertThrows(RecursoNoEncontradoException.class, () -> direccionEnvioService.modificarDireccionEnvio(99L, new DireccionEnvio()));
     }
 
     @Test

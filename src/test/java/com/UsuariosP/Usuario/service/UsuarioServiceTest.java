@@ -20,6 +20,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
+import com.UsuariosP.Usuario.model.CuentaUsuario;
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.repository.UsuarioRepository;
 
@@ -44,7 +45,38 @@ class UsuarioServiceTest {
         return u;
     }
 
-    @Test 
+    @Test
+    void guardarUsuario_SinCuenta(){
+        //Given
+        Usuario u = nuevoUsuario(2L, "Ana", "Martínez", "ana@gmail.com", "987654321", null, "ACTIVO");
+        when(usuarioRepository.save(any(Usuario.class))).thenAnswer(invocation -> invocation.getArgument(0));
+
+        //When
+        Usuario resultado = usuarioService.guardarUsuario(u);
+
+        //Then
+        assertNotNull(resultado);
+        verify(usuarioRepository, times(1)).save(u);
+    }
+
+    @Test
+    void guardarUsuario_ConCuenta(){
+        //Given
+        CuentaUsuario cuenta = new CuentaUsuario();
+        Usuario u = nuevoUsuario(3L, "Pedro", "López", "pedro@gmail.com", "912345678", null, "ACTIVO");
+        u.setCuentaUsuario(cuenta);
+        when(usuarioRepository.save(any(Usuario.class))).thenAnswer(invocation -> invocation.getArgument(0));
+
+        //When
+        Usuario resultado = usuarioService.guardarUsuario(u);
+
+        //Then
+        assertNotNull(resultado);
+        assertEquals(u, cuenta.getUsuario());
+        verify(usuarioRepository, times(1)).save(u);
+    }
+
+    @Test
     void crear_AsignarFechaYEstado(){
         Usuario entrada = nuevoUsuario(123456781L, "Pepe", "Tapia", "pepetapiaaa@gmail.com", "5691234567", null, null);
         when(usuarioRepository.save(any(Usuario.class))).thenAnswer(invocation -> invocation.getArgument(0));
@@ -116,6 +148,15 @@ class UsuarioServiceTest {
     }
 
     @Test
+    void modificarUsuario_NoExiste_LanzaExcepcion(){
+        //Given
+        when(usuarioRepository.findById(99999999L)).thenReturn(Optional.empty());
+
+        //When - Then
+        assertThrows(RecursoNoEncontradoException.class, () -> usuarioService.modificarUsuario(99999999L, new Usuario()));
+    }
+
+    @Test
     void desactivarUsuario_CambiarEstado(){
         Usuario existente = nuevoUsuario(123456781L, "Pepe", "Tapia", "pepetapiaaa@gmail.com", "5691234567", null, "ACTIVO");
         when(usuarioRepository.findById(123456781L)).thenReturn(Optional.of(existente));
@@ -126,6 +167,15 @@ class UsuarioServiceTest {
         assertNotNull(resultado);
         assertEquals("INACTIVO", resultado.getEstadoUsuario());
         verify(usuarioRepository, times(1)).save(existente);
+    }
+
+    @Test
+    void desactivar_NoExiste_LanzaExcepcion(){
+        //Given
+        when(usuarioRepository.findById(99999999L)).thenReturn(Optional.empty());
+
+        //When - Then
+        assertThrows(RecursoNoEncontradoException.class, () -> usuarioService.desactivar(99999999L));
     }
 
     @Test

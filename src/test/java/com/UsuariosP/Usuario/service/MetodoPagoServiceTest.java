@@ -1,5 +1,6 @@
 package com.UsuariosP.Usuario.service;
 
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 import com.UsuariosP.Usuario.model.MetodoPago;
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.repository.MetodoPagoRepository;
@@ -82,6 +83,33 @@ class MetodoPagoServiceTest {
     }
     
     @Test
+    void crear_ActivoFalse_PrincipalNull(){
+        //Given
+        MetodoPago entrada = nuevoMetodoPago(null, 1L, "DEBITO", "Visa", "token789", "9876", "Otra tarjeta", Date.valueOf("2025-12-31"), "Juan Perez", false, null);
+        when(metodoPagoRepository.save(any(MetodoPago.class))).thenAnswer(invocacion -> invocacion.getArgument(0));
+
+        //When
+        MetodoPago resultado = metodoPagoService.crear(entrada);
+
+        //Then
+        assertFalse(resultado.getPrincipal());
+    }
+
+    @Test
+    void crear_PrincipalNoNull(){
+        //Given
+        MetodoPago entrada = nuevoMetodoPago(null, 1L, "DEBITO", "Visa", "token789", "9876", "Otra tarjeta", Date.valueOf("2025-12-31"), "Juan Perez", true, false);
+        when(metodoPagoRepository.save(any(MetodoPago.class))).thenAnswer(invocacion -> invocacion.getArgument(0));
+
+        //When
+        MetodoPago resultado = metodoPagoService.crear(entrada);
+
+        //Then
+        assertFalse(resultado.getPrincipal());
+        assertTrue(resultado.getActivo());
+    }
+
+    @Test
     void listar_RetornarMetodosPago(){
         //Given
         MetodoPago m1 = nuevoMetodoPago(1L, 1L, "Tarjeta de Crédito", "Visa", "token123", "1234", "Mi Visa", Date.valueOf("2025-12-31"), "Juan Perez", true, true);
@@ -129,6 +157,15 @@ class MetodoPagoServiceTest {
     }
 
     @Test
+    void modificarMetodoPago_NoExiste_LanzaExcepcion(){
+        //Given
+        when(metodoPagoRepository.findById(99L)).thenReturn(Optional.empty());
+
+        //When - Then
+        assertThrows(RecursoNoEncontradoException.class, () -> metodoPagoService.modificarMetodoPago(99L, new MetodoPago()));
+    }
+
+    @Test
     void marcarPrincipal_metodo(){
         //Given
         Usuario propietario = new Usuario();
@@ -140,7 +177,7 @@ class MetodoPagoServiceTest {
         otro.setUsuario(propietario);
 
         when(metodoPagoRepository.findById(1L)).thenReturn(Optional.of(existente));
-        when(metodoPagoRepository.findByUsuarioRut(12345678L)).thenReturn(Arrays.asList(otro));
+        when(metodoPagoRepository.findByUsuarioRut(12345678L)).thenReturn(Arrays.asList(existente, otro));
         when(metodoPagoRepository.save(any(MetodoPago.class))).thenAnswer(invocacion -> invocacion.getArgument(0));
 
         //When

@@ -1,5 +1,6 @@
 package com.UsuariosP.Usuario.service;
 
+import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 import com.UsuariosP.Usuario.model.Sesion;
 import com.UsuariosP.Usuario.repository.SesionRepository;
 
@@ -78,6 +79,15 @@ class SesionServiceTest {
         assertEquals("token-nuevo-999", resultado.getTokenSesion());
         assertEquals("INACTIVA", resultado.getEstadoSesion());
         verify(sesionRepository, times(1)).save(existente);
+    }
+
+    @Test
+    void modificarSesion_NoExiste_LanzaExcepcion() {
+        //Given
+        when(sesionRepository.findById(99L)).thenReturn(Optional.empty());
+
+        //When - Then
+        assertThrows(RecursoNoEncontradoException.class, () -> sesionService.modificarSesion(99L, new Sesion()));
     }
 
     @Test

@@ -114,6 +114,14 @@ class SesionControllerTest {
     }
 
     @Test
+    void validarSesion_noAutorizado() throws Exception {
+        Mockito.when(sesionService.validarSesion(99L)).thenReturn(null);
+
+        mockMvc.perform(get("/api/v1/sesion/validar/99"))
+                .andExpect(status().isUnauthorized());
+    }
+
+    @Test
     void expirarSesion() throws Exception {
         Sesion cerrada = nuevaSesion(1L, "token-abc", "INACTIVA", LocalDateTime.now().plusHours(1));
         Mockito.when(sesionService.cerrarSesion(1L)).thenReturn(cerrada);

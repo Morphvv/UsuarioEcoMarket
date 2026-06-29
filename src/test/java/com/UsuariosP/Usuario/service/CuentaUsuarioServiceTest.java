@@ -96,6 +96,19 @@ class CuentaUsuarioServiceTest {
     }
 
     @Test
+    void modificarCuenta_NoExiste_RetornarNull(){ //Cuando no existe la cuenta
+        //Given
+        when(cuentaUsuarioRepository.findById(99L)).thenReturn(Optional.empty());
+
+        //When
+        CuentaUsuario resultado = cuentaUsuarioService.modificarCuentaU(99L, new CuentaUsuario());
+
+        //Then
+        assertNull(resultado);
+        verify(cuentaUsuarioRepository, never()).save(any(CuentaUsuario.class));
+    }
+
+    @Test
     void autenticar_RetornarCuenta_UltimoAcceso(){ //La cuenta y password tienen que coincidir 
         //Given
         CuentaUsuario cuentaExistente = nuevaCuenta(1L, "pepetapiaaa", "pepetapiaaa@example.com", "password123", "Activa", null);
