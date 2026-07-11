@@ -1,6 +1,7 @@
 package com.UsuariosP.Usuario.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.UsuariosP.Usuario.exception.GlobalExceptionHandler;
 import com.UsuariosP.Usuario.model.MetodoPago;
 import com.UsuariosP.Usuario.service.MetodoPagoService;
 import org.junit.jupiter.api.BeforeEach;
@@ -42,7 +43,7 @@ class MetodoPagoControllerTest {
 
     @BeforeEach
     void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(metodoPagoController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(metodoPagoController).setControllerAdvice(new GlobalExceptionHandler()).build();
     }
 
     private MetodoPago nuevoMetodo(long id, String tipoPago, Boolean principal, Boolean activo) {
@@ -68,7 +69,7 @@ class MetodoPagoControllerTest {
         mockMvc.perform(post("/api/v1/metodoPago/crear")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(entradaM)))
-            .andExpect(status().isOk())
+            .andExpect(status().isCreated())
             .andExpect(jsonPath("$.activo").value(true))
             .andExpect(jsonPath("$.principal").value(false));
     }
@@ -135,6 +136,6 @@ class MetodoPagoControllerTest {
         Mockito.doNothing().when(metodoPagoService).eliminar(1L);
 
         mockMvc.perform(delete("/api/v1/metodoPago/eliminar/1"))
-                .andExpect(status().isOk());
+                .andExpect(status().isNoContent());
     }
 }

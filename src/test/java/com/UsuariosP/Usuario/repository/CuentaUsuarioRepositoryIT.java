@@ -23,7 +23,7 @@ class CuentaUsuarioRepositoryIT {
 
         c.setNombreUsuario(nombreUsuario);
         c.setEmail(email);
-        c.setPassword("1234");
+        c.setPassword("123456");
         c.setRol("CLIENTE");
         c.setEstadoCuenta("ACTIVA");
         return c;

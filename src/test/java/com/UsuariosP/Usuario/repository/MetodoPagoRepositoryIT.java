@@ -39,6 +39,8 @@ class MetodoPagoRepositoryIT {
         m.setUsuario(usuario);   // <- enlaza con el dueno (llena usuario_id)
         m.setTipoPago(tipoPago);
         m.setProveedorPago("Transbank");
+        m.setTokenPago("tok_test_123");
+        m.setUltimosDigitos("4242");
         m.setActivo(activo);
         m.setPrincipal(false);
         return m;

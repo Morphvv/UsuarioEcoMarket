@@ -13,6 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "direcciones_envio")
@@ -46,6 +47,7 @@ public class DireccionEnvio {
     private String region;
 
     @NotBlank(message = "El codigo postal es obligatorio")
+    @Size(min = 4, max = 10, message = "El codigo postal debe tener entre 4 y 10 caracteres")
     private String codigoPostal;
     private String referencia;
     private Boolean direccionPrincipal;

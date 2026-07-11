@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -51,5 +52,31 @@ class GlobalExceptionHandlerTest {
         //Then
         assertNotNull(resultado);
         assertEquals("no se encontró el recurso", resultado.get("error"));
+    }
+
+    @Test
+    void manejarDuplicado(){
+        //Given
+        DataIntegrityViolationException ex = new DataIntegrityViolationException("Duplicate entry");
+
+        //When
+        Map<String, String> resultado = handler.manejarDuplicado(ex);
+
+        //Then
+        assertNotNull(resultado);
+        assertEquals("Ya existe un registro con ese valor", resultado.get("error"));
+    }
+
+    @Test
+    void manejarErrorGeneral(){
+        //Given
+        Exception ex = new Exception("Error inesperado");
+
+        //When
+        Map<String, String> resultado = handler.manejarErrorGeneral(ex);
+
+        //Then
+        assertNotNull(resultado);
+        assertEquals("Error interno del servidor", resultado.get("error"));
     }
 }

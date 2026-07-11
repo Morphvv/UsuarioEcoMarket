@@ -14,6 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "metodos_pago")
@@ -36,7 +37,9 @@ public class MetodoPago {
 
     @NotBlank(message = "El proveedor de pago es obligatorio")
     private String proveedorPago;
+    @NotBlank(message = "El token de pago es obligatorio")
     private String tokenPago;
+    @Size(min = 4, max = 4, message = "Los ultimos digitos deben ser exactamente 4")
     private String ultimosDigitos;
     private String alias;
     private Date fechaExpiracion;

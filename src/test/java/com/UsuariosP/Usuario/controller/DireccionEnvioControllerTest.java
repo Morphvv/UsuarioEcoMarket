@@ -1,6 +1,7 @@
 package com.UsuariosP.Usuario.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.UsuariosP.Usuario.exception.GlobalExceptionHandler;
 import com.UsuariosP.Usuario.model.DireccionEnvio;
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.service.DireccionEnvioService;
@@ -43,7 +44,7 @@ class DireccionEnvioControllerTest {
 
     @BeforeEach
     void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(direccionEnvioController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(direccionEnvioController).setControllerAdvice(new GlobalExceptionHandler()).build();
     }
 
     private DireccionEnvio nuevaDireccion(Long idDireccion, Long idUsuario, String calle, String numero, String comuna, String ciudad, String region, String codigoPostal, String referencia, Boolean direccionPrincipal, Boolean activa) {
@@ -75,7 +76,7 @@ class DireccionEnvioControllerTest {
         mockMvc.perform(post("/api/v1/direccionEnvio/crear")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(dEntrada)))
-            .andExpect(status().isOk())
+            .andExpect(status().isCreated())
             .andExpect(jsonPath("$.activa").value(true))
             .andExpect(jsonPath("$.direccionPrincipal").value(false));
     }
@@ -140,6 +141,6 @@ class DireccionEnvioControllerTest {
         Mockito.doNothing().when(direccionEnvioService).eliminar(1L);
 
         mockMvc.perform(delete("/api/v1/direccionEnvio/eliminar/1"))
-                .andExpect(status().isOk());
+                .andExpect(status().isNoContent());
     }
 }

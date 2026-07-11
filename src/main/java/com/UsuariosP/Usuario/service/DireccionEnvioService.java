@@ -2,6 +2,8 @@ package com.UsuariosP.Usuario.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,23 +17,27 @@ import com.UsuariosP.Usuario.exception.RecursoNoEncontradoException;
 @Transactional
 public class DireccionEnvioService {
 
+    private static final Logger log = LoggerFactory.getLogger(DireccionEnvioService.class);
+
     @Autowired
     private DireccionEnvioRepository direccionEnvioRepository;
 
     public DireccionEnvio crear(DireccionEnvio direccionEnvio){
         direccionEnvio.setActiva(true);
-
         if (direccionEnvio.getDireccionPrincipal() == null) {
             direccionEnvio.setDireccionPrincipal(false);
         }
+        log.info("Creando direccion de envio para usuario: {}", direccionEnvio.getUsuario() != null ? direccionEnvio.getUsuario().getRut() : "sin usuario");
         return direccionEnvioRepository.save(direccionEnvio);
     }
 
     public List<DireccionEnvio> listar(){
+        log.info("Listando todas las direcciones de envio");
         return direccionEnvioRepository.findAll();
     }
 
     public List<DireccionEnvio> listarPorUsuario(Long idUsuario){
+        log.info("Listando direcciones de envio del usuario: {}", idUsuario);
         return direccionEnvioRepository.findByUsuarioRutAndActivaTrue(idUsuario);
     }
 
@@ -48,13 +54,14 @@ public class DireccionEnvioService {
         existente.setReferencia(direccionEnvio.getReferencia());
         existente.setDireccionPrincipal(direccionEnvio.getDireccionPrincipal());
         existente.setActiva(direccionEnvio.getActiva());
-
+        log.info("Modificando direccion con id: {}", id);
         return direccionEnvioRepository.save(existente);
     }
 
     public DireccionEnvio marcarComoPrincipal(Long id){
         DireccionEnvio existente = direccionEnvioRepository.findById(id).orElse(null);
         if (existente == null) {
+            log.warn("No se encontro direccion con id: {}", id);
             return null;
         }
 
@@ -66,6 +73,7 @@ public class DireccionEnvioService {
             }
         }
         existente.setDireccionPrincipal(true);
+        log.info("Direccion {} marcada como principal", id);
         return direccionEnvioRepository.save(existente);
     }
 
@@ -74,12 +82,15 @@ public class DireccionEnvioService {
 
         if (existente != null) {
             existente.setActiva(false);
+            log.info("Desactivando direccion con id: {}", id);
             return direccionEnvioRepository.save(existente);
         }
+        log.warn("No se encontro direccion con id: {}", id);
         return null;
     }
 
     public void eliminar(Long id){
+        log.info("Eliminando direccion con id: {}", id);
         direccionEnvioRepository.deleteById(id);
     }
 }

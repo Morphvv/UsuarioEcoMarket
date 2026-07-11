@@ -3,6 +3,7 @@ package com.UsuariosP.Usuario.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.UsuariosP.Usuario.exception.GlobalExceptionHandler;
 import com.UsuariosP.Usuario.model.Sesion;
 import com.UsuariosP.Usuario.service.SesionService;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,6 +52,7 @@ class SesionControllerTest {
     void setup() {
         mockMvc = MockMvcBuilders
                 .standaloneSetup(sesionController)
+                .setControllerAdvice(new GlobalExceptionHandler())
                 .setMessageConverters(new MappingJackson2HttpMessageConverter(objectMapper))
                 .build();
     }
@@ -67,16 +69,16 @@ class SesionControllerTest {
 
     @Test
     void iniciarSesion() throws Exception {
-        Sesion entradaS = nuevaSesion(null, "token-abv", null, LocalDateTime.now().plusHours(2));
-        Sesion iniciadaS = nuevaSesion(1L, "token-abc", "ACTIVA", LocalDateTime.now().plusHours(2));
+        Sesion entradaS = nuevaSesion(null, "token-abv-xyz", null, LocalDateTime.now().plusHours(2));
+        Sesion iniciadaS = nuevaSesion(1L, "token-abc-xyz", "ACTIVA", LocalDateTime.now().plusHours(2));
         Mockito.when(sesionService.iniciarSesion(any(Sesion.class))).thenReturn(iniciadaS);
 
         mockMvc.perform(post("/api/v1/sesion/iniciar")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(entradaS)))
-            .andExpect(status().isOk())
+            .andExpect(status().isCreated())
             .andExpect(jsonPath("$.estadoSesion").value("ACTIVA"))
-            .andExpect(jsonPath("$.tokenSesion").value("token-abc"));
+            .andExpect(jsonPath("$.tokenSesion").value("token-abc-xyz"));
     }
 
     @Test
@@ -136,6 +138,6 @@ class SesionControllerTest {
         Mockito.doNothing().when(sesionService).eliminar(1L);
 
         mockMvc.perform(delete("/api/v1/sesion/eliminar/1"))
-                .andExpect(status().isOk());
+                .andExpect(status().isNoContent());
     }
 }

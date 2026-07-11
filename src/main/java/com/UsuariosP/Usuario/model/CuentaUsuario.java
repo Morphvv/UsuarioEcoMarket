@@ -14,7 +14,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor
@@ -33,9 +35,13 @@ public class CuentaUsuario {
     private String nombreUsuario;
 
     @Column(nullable = false, unique = true)
+    @NotBlank(message = "El email es obligatorio")
+    @Email(message = "El formato de email es invalido")
     private String email;
 
     @Column(nullable = false)
+    @NotBlank(message = "La contraseña es obligatoria")
+    @Size(min = 6, max = 100, message = "La contraseña debe tener entre 6 y 100 caracteres")
     private String password;
 
     @Column(nullable = false)

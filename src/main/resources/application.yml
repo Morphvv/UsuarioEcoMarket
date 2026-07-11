@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Usuario
+  profiles:
+    active: dev
+
+server:
+  port: 9090
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs

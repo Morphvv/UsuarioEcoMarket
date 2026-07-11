@@ -3,6 +3,7 @@ package com.UsuariosP.Usuario.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.UsuariosP.Usuario.exception.GlobalExceptionHandler;
 import com.UsuariosP.Usuario.model.Usuario;
 import com.UsuariosP.Usuario.service.UsuarioService;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,6 +52,7 @@ class UsuarioControllerTest {
     void setup() {
         mockMvc = MockMvcBuilders
                 .standaloneSetup(usuarioController)
+                .setControllerAdvice(new GlobalExceptionHandler())
                 .setMessageConverters(new MappingJackson2HttpMessageConverter(objectMapper))
                 .build();
     }
@@ -77,7 +79,7 @@ class UsuarioControllerTest {
         mockMvc.perform(post("/api/v1/usuarios/crear")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(uEntrada)))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.nombre").value("Pepito"))
                 .andExpect(jsonPath("$.estadoUsuario").value("ACTIVO"));
     }
@@ -133,6 +135,6 @@ class UsuarioControllerTest {
         Mockito.doNothing().when(usuarioService).eliminar(123456789L);
 
         mockMvc.perform(delete("/api/v1/usuarios/eliminar/123456789"))
-                .andExpect(status().isOk());
+                .andExpect(status().isNoContent());
     }
 }

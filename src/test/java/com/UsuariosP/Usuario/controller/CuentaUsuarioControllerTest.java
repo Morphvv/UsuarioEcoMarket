@@ -1,6 +1,7 @@
 package com.UsuariosP.Usuario.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.UsuariosP.Usuario.exception.GlobalExceptionHandler;
 import com.UsuariosP.Usuario.model.CuentaUsuario;
 import com.UsuariosP.Usuario.service.CuentaUsuarioService;
 import org.junit.jupiter.api.BeforeEach;
@@ -42,7 +43,7 @@ class CuentaUsuarioControllerTest {
 
     @BeforeEach
     void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(cuentaUsuarioController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(cuentaUsuarioController).setControllerAdvice(new GlobalExceptionHandler()).build();
     }
 
     private CuentaUsuario nuevaCuenta(Long idUsuario, String nombreUsuario, String email, String password, String rol, String estadoCuenta) {
@@ -58,14 +59,14 @@ class CuentaUsuarioControllerTest {
 
     @Test
     void crearCuenta() throws Exception {
-        CuentaUsuario cEntrada = nuevaCuenta(null, "jperez", "jperez@gmail.com", "1234", null, null);
-        CuentaUsuario cCreado = nuevaCuenta(1L, "jperez", "jperez@gmail.com", "1234", "CLIENTE", "ACTIVA");
+        CuentaUsuario cEntrada = nuevaCuenta(null, "jperez", "jperez@gmail.com", "123456", null, null);
+        CuentaUsuario cCreado = nuevaCuenta(1L, "jperez", "jperez@gmail.com", "123456", "CLIENTE", "ACTIVA");
         Mockito.when(cuentaUsuarioService.crear(any(CuentaUsuario.class))).thenReturn(cCreado);
 
         mockMvc.perform(post("/api/v1/cuentaUsuario/crear")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(cEntrada)))
-            .andExpect(status().isOk())
+            .andExpect(status().isCreated())
             .andExpect(jsonPath("$.rol").value("CLIENTE"))
             .andExpect(jsonPath("$.estadoCuenta").value("ACTIVA"));
     }
@@ -124,6 +125,6 @@ class CuentaUsuarioControllerTest {
         Mockito.doNothing().when(cuentaUsuarioService).eliminar(1L);
 
         mockMvc.perform(delete("/api/v1/cuentaUsuario/eliminar/1"))
-            .andExpect(status().isOk());
+            .andExpect(status().isNoContent());
     }
 }

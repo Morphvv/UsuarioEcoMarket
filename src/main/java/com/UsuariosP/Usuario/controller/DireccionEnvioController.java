@@ -3,6 +3,8 @@ package com.UsuariosP.Usuario.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.UsuariosP.Usuario.model.DireccionEnvio;
 import com.UsuariosP.Usuario.service.DireccionEnvioService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
@@ -29,38 +35,61 @@ public class DireccionEnvioController {
     private DireccionEnvioService direccionEnvioService;
 
     @PostMapping("/crear")
-    public DireccionEnvio crearDireccionEnvio(@Valid @RequestBody DireccionEnvio direccionEnvio){
-        return direccionEnvioService.crear(direccionEnvio);
+    @Operation(summary = "Crear una direccion de envio")
+    @ApiResponses({ @ApiResponse(responseCode = "201", description = "Direccion creada"), @ApiResponse(responseCode = "400", description = "Datos invalidos") })
+    public ResponseEntity<DireccionEnvio> crearDireccionEnvio(@Valid @RequestBody DireccionEnvio direccionEnvio){
+        return ResponseEntity.status(HttpStatus.CREATED).body(direccionEnvioService.crear(direccionEnvio));
     }
 
     @GetMapping("/listar")
-    public List<DireccionEnvio> listarDireccionEnvio(){
-        return direccionEnvioService.listar();
+    @Operation(summary = "Listar todas las direcciones")
+    @ApiResponse(responseCode = "200", description = "Lista de direcciones")
+    public ResponseEntity<List<DireccionEnvio>> listarDireccionEnvio(){
+        return ResponseEntity.ok(direccionEnvioService.listar());
     }
 
     @GetMapping("/usuario/{idUsuario}")
-    public List<DireccionEnvio> listarPorUsuario(@PathVariable Long idUsuario){
-        return direccionEnvioService.listarPorUsuario(idUsuario);
+    @Operation(summary = "Listar direcciones por usuario")
+    @ApiResponse(responseCode = "200", description = "Lista de direcciones del usuario")
+    public ResponseEntity<List<DireccionEnvio>> listarPorUsuario(@PathVariable Long idUsuario){
+        return ResponseEntity.ok(direccionEnvioService.listarPorUsuario(idUsuario));
     }
 
     @PutMapping("/modificar/{id}")
-    public DireccionEnvio modificarDireccionEnvio(@Valid @PathVariable Long id, @RequestBody DireccionEnvio direccionEnvio){
-        return direccionEnvioService.modificarDireccionEnvio(id, direccionEnvio);
+    @Operation(summary = "Modificar direccion de envio")
+    @ApiResponses({ @ApiResponse(responseCode = "200", description = "Direccion modificada"), @ApiResponse(responseCode = "404", description = "Direccion no encontrada") })
+    public ResponseEntity<DireccionEnvio> modificarDireccionEnvio(@PathVariable Long id, @Valid @RequestBody DireccionEnvio direccionEnvio){
+        return ResponseEntity.ok(direccionEnvioService.modificarDireccionEnvio(id, direccionEnvio));
     }
 
     @PutMapping("/principal/{id}")
-    public DireccionEnvio marcarComoPrincipal(@PathVariable Long id){
-        return direccionEnvioService.marcarComoPrincipal(id);
+    @Operation(summary = "Marcar direccion como principal")
+    @ApiResponses({ @ApiResponse(responseCode = "200", description = "Direccion marcada como principal"), @ApiResponse(responseCode = "404", description = "Direccion no encontrada") })
+    public ResponseEntity<DireccionEnvio> marcarComoPrincipal(@PathVariable Long id){
+        DireccionEnvio resultado = direccionEnvioService.marcarComoPrincipal(id);
+        if (resultado == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(resultado);
     }
 
     @PutMapping("/desactivar/{id}")
-    public DireccionEnvio desactivar(@PathVariable Long id){
-        return direccionEnvioService.desactivar(id);
+    @Operation(summary = "Desactivar direccion de envio")
+    @ApiResponses({ @ApiResponse(responseCode = "200", description = "Direccion desactivada"), @ApiResponse(responseCode = "404", description = "Direccion no encontrada") })
+    public ResponseEntity<DireccionEnvio> desactivar(@PathVariable Long id){
+        DireccionEnvio resultado = direccionEnvioService.desactivar(id);
+        if (resultado == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(resultado);
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public void eliminar(@PathVariable Long id){
+    @Operation(summary = "Eliminar direccion de envio")
+    @ApiResponse(responseCode = "204", description = "Direccion eliminada")
+    public ResponseEntity<Void> eliminar(@PathVariable Long id){
         direccionEnvioService.eliminar(id);
+        return ResponseEntity.noContent().build();
     }
 
 }
